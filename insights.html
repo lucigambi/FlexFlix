@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FlexFlix.ai Insights — Noticias, investigación y perspectivas sobre educación, IA y desarrollo cognitivo."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Insights — FlexFlix.ai</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="neural-cinematic.css" />
+    <link rel="stylesheet" href="insights.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="nb-texture" aria-hidden="true"></div>
+    <img
+      class="nb-back nb-back--l"
+      src="assets/img/side-back.png"
+      aria-hidden="true"
+      alt=""
+    />
+    <img
+      class="nb-back nb-back--r"
+      src="assets/img/side-back.png"
+      aria-hidden="true"
+      alt=""
+    />
+    <img
+      class="nb-neuron nb-l1"
+      src="assets/img/capa-neurona.png"
+      aria-hidden="true"
+      alt=""
+    />
+    <img
+      class="nb-neuron nb-r2"
+      src="assets/img/capa-neurona.png"
+      aria-hidden="true"
+      alt=""
+    />
+
+    <!-- NAV -->
+    <nav class="nav scrolled" id="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="FlexFlix inicio">
+          <img
+            src="assets/img/flexflix_logo2.png"
+            alt="FlexFlix"
+            class="nav__logo-img2"
+            height="36"
+          />
+        </a>
+        <nav class="nav__links" aria-label="Secciones">
+          <a href="index.html#el-problema" class="nav__link">El problema</a>
+          <a href="index.html#solucion" class="nav__link">Solución</a>
+          <a href="index.html#arquitectura" class="nav__link">Arquitectura</a>
+          <a href="index.html#metodologia" class="nav__link">Metodología</a>
+          <a href="index.html#casos" class="nav__link">Casos</a>
+          <a href="index.html#para-quien" class="nav__link">Para quién</a>
+          <a href="insights.html" class="nav__link nav__link--insights"
+            >Insights</a
+          >
+        </nav>
+        <a href="contacto.html" class="btn btn--nav">Conversemos</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu__nav">
+        <a href="index.html#el-problema" class="mobile-link"><span class="mobile-link__num">01</span><span class="mobile-link__text">El problema</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#solucion" class="mobile-link"><span class="mobile-link__num">02</span><span class="mobile-link__text">Solución</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#arquitectura" class="mobile-link"><span class="mobile-link__num">03</span><span class="mobile-link__text">Arquitectura</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#metodologia" class="mobile-link"><span class="mobile-link__num">04</span><span class="mobile-link__text">Metodología</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#casos" class="mobile-link"><span class="mobile-link__num">05</span><span class="mobile-link__text">Casos</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#para-quien" class="mobile-link"><span class="mobile-link__num">06</span><span class="mobile-link__text">Para quién</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="insights.html" class="mobile-link mobile-link--insights"><span class="mobile-link__num">07</span><span class="mobile-link__text">Insights</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a href="contacto.html" class="mobile-link--cta">Conversemos</a>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- Hero -->
+        <header class="insights-hero">
+          <span class="insights-hero__label">FlexFlix.ai · ACTUALIDAD</span>
+          <h1 class="insights-hero__title">Insights</h1>
+          <p class="insights-hero__sub">
+            Investigaciones, mundo edTECH, Artículos de interés, conferencias de
+            nuestro CEO y mas...
+          </p>
+        </header>
+
+        <!-- Filtros -->
+        <div class="insights-filters">
+          <button class="insights-filter is-active" data-filter="todos">
+            Todos
+          </button>
+          <button class="insights-filter" data-filter="articulos">
+            Artículos de nuestro CEO
+          </button>
+          <button class="insights-filter" data-filter="conferencias">
+            Conferencias
+          </button>
+          <button class="insights-filter" data-filter="eventos">Eventos</button>
+          <button class="insights-filter" data-filter="prensa">Prensa</button>
+        </div>
+
+        <!-- Lista -->
+        <div class="insights-list">
+          <!-- NEW · Artículo — La escuela ya no compite por información -->
+          <article class="insight-card" data-category="articulos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0018_Fondo.png"
+                alt="La escuela ya no compite por información"
+                loading="lazy"
+              />
+              <span class="insight-card__category">by Pablo Aristizabal</span>
+              <span class="insight-card__new">New</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">29 Mayo 2026</span>
+                <span class="insight-card__location">CABA</span>
+              </div>
+              <h2 class="insight-card__title">
+                La escuela ya no compite por información. Compite por desarrollar pensamiento.
+              </h2>
+              <p class="insight-card__excerpt">
+                Durante siglos, la escuela fue una de las principales fuentes de acceso al conocimiento. Hoy ese rol cambió para siempre — y el verdadero desafío educativo recién empieza.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+
+                <p>
+                  Durante siglos, la escuela fue una de las principales fuentes de acceso al conocimiento. Hoy esa realidad cambió. La información está disponible de forma inmediata a través de buscadores, redes sociales, plataformas digitales e inteligencia artificial. En este nuevo escenario, el desafío educativo ya no consiste en transmitir contenidos, sino en desarrollar capacidades cognitivas que permitan comprender, analizar y utilizar esa información de manera significativa.
+                </p>
+
+                <p>
+                  La irrupción de la inteligencia artificial obliga a replantear el rol de docentes, estudiantes e instituciones. Mientras la IA puede responder preguntas, resumir textos o generar contenidos, habilidades como pensar críticamente, argumentar, formular preguntas relevantes, tomar decisiones y crear soluciones originales continúan siendo profundamente humanas.
+                </p>
+
+                <img src="assets/img/paccc-personaliza.png" alt="" class="insight-article-img" loading="lazy" />
+
+                <p>
+                  En este contexto, el docente deja de ser un transmisor de información para convertirse en un orquestador del desarrollo cognitivo. Su función ya no es explicar para que otros escuchen pasivamente, sino diseñar experiencias que provoquen reflexión, generen desafíos intelectuales y acompañen procesos de aprendizaje más complejos.
+                </p>
+
+                <p>
+                  La propuesta metodológica PACCC surge como una forma de operacionalizar este nuevo paradigma. A través de las etapas Personaliza, Aprende, Conversa, Crea y Comparte, los estudiantes pasan de consumir información a construir conocimiento, desarrollando competencias que la inteligencia artificial no puede reemplazar por sí sola.
+                </p>
+
+                <img src="assets/img/paccc-conversa.png" alt="" class="insight-article-img" loading="lazy" />
+
+                <p>
+                  La clave no está en usar más tecnología, sino en utilizarla dentro de una arquitectura pedagógica que fortalezca el pensamiento humano. Cuando el cerebro piensa, la inteligencia artificial potencia. Cuando deja de pensar, la inteligencia artificial reemplaza.
+                </p>
+
+                <p>
+                  Por eso, el verdadero valor educativo en la era de la IA ya no se mide por la cantidad de información que una persona recuerda, sino por su capacidad para ejercer criterio, creatividad, juicio, autonomía y colaboración inteligente con las nuevas herramientas tecnológicas.
+                </p>
+
+                <img src="assets/img/paccc-crea.png" alt="" class="insight-article-img" loading="lazy" />
+
+                <p>
+                  El futuro de la educación no consiste en competir con la inteligencia artificial. Consiste en diseñar ecosistemas donde la tecnología amplifique las capacidades humanas y donde el desarrollo del pensamiento siga siendo el objetivo central del aprendizaje.
+                </p>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- 15 · Conferencias — Conferencia San Rafael 5 junio -->
+          <article class="insight-card" data-category="conferencias">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0012_Fondo.png"
+                alt="Conferencia Pablo Aristizábal San Rafael"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Conferencias</span>
+              <span class="insight-card__upcoming">Próximo</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">5 Junio 2026</span>
+                <span class="insight-card__location">San Rafael, Mendoza</span>
+              </div>
+              <h2 class="insight-card__title">
+                Pablo Aristizábal en San Rafael: "La infraestructura necesaria para que la IA transforme tu escuela"
+              </h2>
+              <p class="insight-card__excerpt">
+                El debate ya no es si la IA debe entrar a la escuela, sino cómo. Este viernes a las 11.30 hs, Aristizábal desglosará paso a paso qué infraestructura cognitiva necesita cada institución.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  El debate ya no es si la IA debe entrar a la escuela, sino cómo debe hacerlo para generar verdadero impacto. La infraestructura tecnológica es condición necesaria, pero sin una metodología que ponga al humano en el centro no alcanza para transformar nada.
+                </p>
+                <p>
+                  En FlexFlix.ai construimos un ecosistema de Inteligencia Aumentada. La plataforma no hace el trabajo por los estudiantes: los estimula a pensar más allá, combinando pensamiento crítico y educación para potenciar sus capacidades al máximo.
+                </p>
+                <p>
+                  Este viernes 5 de junio a las 11.30 hs, Pablo Aristizábal presentará en el Centro de Congresos y Exposiciones de San Rafael el mapa completo de la infraestructura cognitiva que cada colegio necesita para que la IA genere aprendizaje real — no automatización superficial.
+                </p>
+                <p>
+                  <strong>📍 Centro de Congresos y Exposiciones · San Rafael, Mendoza · 5 de junio · 11.30 hs</strong>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 17 · Eventos — IA Week Neuquén -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0016_Fondo.png"
+                alt="IA Week Neuquén FlexFlix"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">Marzo 2026</span>
+                <span class="insight-card__location">Neuquén, Argentina</span>
+              </div>
+              <h2 class="insight-card__title">
+                IA Week Neuquén: construyendo el futuro de la educación con quienes lideran la transformación
+              </h2>
+              <p class="insight-card__excerpt">
+                Líderes, emprendedores, educadores y especialistas reunidos en Neuquén con una convicción compartida: la IA transformará profundamente nuestra manera de aprender y enseñar.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  IA Week Neuquén fue una experiencia inspiradora. Líderes, emprendedores, educadores y especialistas reunidos bajo una misma convicción: la inteligencia artificial transformará profundamente nuestra manera de aprender y enseñar, y hay que estar preparados para gobernar ese proceso.
+                </p>
+                <p>
+                  Pablo Aristizábal, CEO de FlexFlix.ai, compartió la visión de la compañía sobre cómo construir una educación capaz de liderar esta nueva era en lugar de simplemente adaptarse a ella. La diferencia no es semántica: una postura reactiva integra herramientas, una postura proactiva construye arquitectura.
+                </p>
+                <p>
+                  "La IA no debe reemplazar el pensamiento. Debe potenciarlo." Esa convicción, que es el núcleo de la Cognitive Governance Infrastructure de FlexFlix.ai, resonó con fuerza en una audiencia que ya está tomando decisiones concretas sobre el futuro educativo de la región.
+                </p>
+                <p>
+                  FlexFlix.ai se honra de colaborar con gobiernos e instituciones que están liderando esta transformación desde la acción, no desde la especulación. Neuquén ya está construyendo el futuro.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 1b · Articulos -->
+          <article class="insight-card" data-category="articulos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0004_Capa-11.png"
+                alt="FlexFlix en Mendoza"
+                loading="lazy"
+              />
+              <span class="insight-card__category">by Pablo Aristizabal</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">19 Abril 2026</span>
+                <span class="insight-card__location">CABA</span>
+              </div>
+              <h2 class="insight-card__title">
+                La IA no es una herramienta que se usa, es una infraestructura
+                que nos modifica.
+              </h2>
+              <p class="insight-card__excerpt">
+                Es una grave minimización creer que basta con aprender a usar la
+                #IA porque siempre nos adaptamos a la tecnología.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Es una grave minimización creer que basta con aprender a usar
+                  la #IA porque siempre nos adaptamos a la tecnología. La IA no
+                  es una herramienta que se usa, es una infraestructura que nos
+                  modifica. Por primera vez, la tecnología se tiene que adaptar
+                  al ser humano bajo una gobernanza estricta: si la
+                  infraestructura elimina el esfuerzo de pensar, destruye
+                  nuestra soberanía cognitiva y puede disminuir nuestra
+                  humanidad
+                </p>
+
+                <p>
+                  Este doble reconocimiento es más que un honor: es una alegria
+                  y un premio a la perseverancia y pasión por los estudiantes y
+                  docentes.
+                </p>
+
+                <p>
+                  Con estos dos premios a FlexFlix sumamos 10 Premios Sadosky.
+                </p>
+
+                <p>
+                  Un impulso enorme para seguir liderando la transformación
+                  educativa desde Argentina hacia el mundo. 🌍🚀
+                </p>
+
+                <p>
+                  Gracias al equipazo de @flexflix.ai que hace posible vivir en
+                  un modo de invención constante ❤️
+                </p>
+
+                <p>
+                  Y también de quienes apuestan por el futuro del país:
+                  @mmechimiguel , @tadeo_gz , @emanuelgainza entre otros y a sus
+                  increíbles equipos . Gracias por habilitar oportunidades
+                  reales a docentes y estudiantes 🧠🚀
+                </p>
+
+                <p>
+                  Gracias al honorable jurado por acompañar esta visión y a todo
+                  el equipazo de @cessiargentina
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 1 · Prensa -->
+          <article class="insight-card" data-category="prensa">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0000_Capa-4.png"
+                alt="FlexFlix en Mendoza"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Prensa</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">8 Mayo 2026</span>
+                <span class="insight-card__location">CABA</span>
+              </div>
+              <h2 class="insight-card__title">
+                Ganamos 2 Sadosky 2025. Con estos dos premios a FlexFlix sumamos
+                10 Premios Sadosky.
+              </h2>
+              <p class="insight-card__excerpt">
+                Doble reconocimiento paraflexflix.ai 🏆 1. Innovación en
+                Desarrollo de Talentos 🏆 2.Scale Up: empresa tecnológica de
+                mayor crecimiento.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Innovación educativa + Escalabilidad, significa que no solo
+                  impactamos cognitivamente (talento, IA educativa)… también
+                  estamos creciendo como industria tecnológica con proyección
+                </p>
+
+                <p>
+                  Este doble reconocimiento es más que un honor: es una alegria
+                  y un premio a la perseverancia y pasión por los estudiantes y
+                  docentes.
+                </p>
+
+                <p>
+                  Con estos dos premios a FlexFlix sumamos 10 Premios Sadosky.
+                </p>
+
+                <p>
+                  Un impulso enorme para seguir liderando la transformación
+                  educativa desde Argentina hacia el mundo. 🌍🚀
+                </p>
+
+                <p>
+                  Gracias al equipazo de @flexflix.ai que hace posible vivir en
+                  un modo de invención constante ❤️
+                </p>
+
+                <p>
+                  Y también de quienes apuestan por el futuro del país:
+                  @mmechimiguel , @tadeo_gz , @emanuelgainza entre otros y a sus
+                  increíbles equipos . Gracias por habilitar oportunidades
+                  reales a docentes y estudiantes 🧠🚀
+                </p>
+
+                <p>
+                  Gracias al honorable jurado por acompañar esta visión y a todo
+                  el equipazo de @cessiargentina
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 · Prensa — 20.134 estudiantes -->
+          <article class="insight-card" data-category="prensa">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0003_remove.png"
+                alt="20.134 estudiantes"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Prensa</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">28 Marzo 2026</span>
+                <span class="insight-card__location">Buenos Aires, Argentina</span>
+              </div>
+              <h2 class="insight-card__title">
+                El programa Operadores en IA supera los 20.134 estudiantes
+                activos en producción
+              </h2>
+              <p class="insight-card__excerpt">
+                El hito marca el crecimiento sostenido del programa bandera de
+                FlexFlix.ai: más de 20 mil jóvenes aprendiendo a pensar con IA
+                en lugar de delegar en ella.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  FlexFlix.ai anunció que el programa "Operadores en IA" superó
+                  los 20.134 estudiantes activos en cohortes vigentes,
+                  consolidándose como el programa de formación cognitiva con IA
+                  de mayor escala en América Latina.
+                </p>
+                <p>
+                  El programa, que entrena a estudiantes de nivel secundario
+                  para operar con IA de manera crítica y estructurada, lleva
+                  cuatro generaciones de cohortes en tres países. La metodología
+                  PACCC es el eje central: los estudiantes aprenden a construir
+                  presaber propio, dialogar con IA socráticamente y producir
+                  desde la comprensión.
+                </p>
+                <p>
+                  Los datos agregados muestran que el 87% de los egresados del
+                  programa reportan cambios significativos en su forma de
+                  abordar problemas complejos, y el 94% de los docentes que
+                  implementaron el programa expresaron interés en continuarlo en
+                  el siguiente ciclo.
+                </p>
+                <p>
+                  "20.000 estudiantes no es solo un número. Es la evidencia de
+                  que cuando la arquitectura es correcta, el modelo escala. Cada
+                  uno de esos estudiantes tiene un cuaderno cognitivo con su
+                  propia historia de pensamiento", destacó el equipo de
+                  FlexFlix.ai en el comunicado.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 18 · Eventos — PISATÓN Mendoza -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0017_Fondo.png"
+                alt="PISATÓN Mendoza FlexFlix"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">23 · 30 Agosto 2025</span>
+                <span class="insight-card__location">Mendoza, Argentina</span>
+              </div>
+              <h2 class="insight-card__title">
+                Arrancó la PISATÓN Mendoza: el desafío que convierte el aprendizaje en juego
+              </h2>
+              <p class="insight-card__excerpt">
+                Competencia virtual el 23/08 y gran final presencial el 30/08. Repaso de contenidos, ejercicios liberados de exámenes PISA, desafíos en formato cómic y premios que incluyen $2.000.000 para la escuela más participativa.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  La PISATÓN Mendoza ya está en marcha. El desafío que convierte el aprendizaje en juego invita a estudiantes de toda la provincia a prepararse para los exámenes PISA de una forma completamente diferente: entrenando en FlexFlix con ejercicios reales, desafíos creativos y competencia entre escuelas.
+                </p>
+                <p>
+                  Dentro de la plataforma vas a poder repasar los contenidos que necesitás, entrenarte con ejercicios liberados de exámenes PISA anteriores y explorar desafíos en formato cómic y proyectos interdisciplinarios que combinan pensamiento crítico con creatividad.
+                </p>
+                <p>
+                  <strong>Fechas clave:</strong><br />
+                  💻 <strong>23 de agosto</strong> — Competencia virtual<br />
+                  🏟️ <strong>30 de agosto</strong> — Gran final presencial
+                </p>
+                <p>
+                  <strong>Premios:</strong> monopatín eléctrico, tablets, netbook y <strong>$2.000.000 para la escuela con mayor participación</strong>.
+                </p>
+                <p>
+                  El conocimiento es tu mejor herramienta. Más información en <a href="https://pisaton.mendozaaumentada.ai" target="_blank" rel="noopener noreferrer">pisaton.mendozaaumentada.ai</a>
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 16 · Eventos — Bett 2025 Londres -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0015_Fondo.png"
+                alt="FlexFlix en Bett 2025 Londres"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">22 Enero 2025</span>
+                <span class="insight-card__location">Londres, Reino Unido</span>
+              </div>
+              <h2 class="insight-card__title">
+                FlexFlix en Bett 2025: educación aumentada en el escenario EdTech más grande del mundo
+              </h2>
+              <p class="insight-card__excerpt">
+                Del 22 al 24 de enero en Londres, FlexFlix presentó su plataforma de Educación Aumentada junto a Tomi Digital ante los referentes globales de tecnología educativa.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  FlexFlix participó en Bett 2025, la feria de tecnología educativa más grande del mundo, celebrada del 22 al 24 de enero en Londres. Junto a Tomi Digital, presentamos nuestra propuesta de Educación Aumentada ante miles de referentes, ministerios y tomadores de decisión de todo el planeta.
+                </p>
+                <p>
+                  En el corazón de la propuesta: la convicción de que el aula del futuro no es la que tiene más tecnología, sino la que usa la tecnología para encender la curiosidad y convertir a cada estudiante en protagonista de su propio aprendizaje.
+                </p>
+                <p>
+                  FlexFlix combina tres pilares que la distinguen en el mercado global:
+                </p>
+                <p>
+                  <strong>Streaming curricular</strong> — más de 10.000 películas trilingües con enfoque pedagógico que construyen la base cognitiva antes de que el estudiante toque la IA.<br />
+                  <strong>Metodología conversacional</strong> — impulsada por una IA segura, ética y personalizada que repregunta en lugar de responder.<br />
+                  <strong>StudiosAI</strong> — el laboratorio único en el mundo que crea y adapta recursos educativos a medida para cada institución.
+                </p>
+                <p>
+                  Bett 2025 confirmó que la demanda global por soluciones educativas que gobiernen pedagógicamente la IA es real y urgente. FlexFlix llega a ese escenario con casos operativos, datos longitudinales y una arquitectura que ya está funcionando en seis jurisdicciones de América Latina.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 14 · Eventos — Inauguración Mirador TEC Entre Ríos -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0013_Fondo.png"
+                alt="Inauguración Mirador TEC Entre Ríos"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">Mayo 2026</span>
+                <span class="insight-card__location">Entre Ríos, Argentina</span>
+              </div>
+              <h2 class="insight-card__title">
+                Inauguración del Mirador TEC: FlexFlix acompaña a Entre Ríos en su apuesta por la educación con IA
+              </h2>
+              <p class="insight-card__excerpt">
+                El gobernador Rogelio Frigerio y el equipo provincial inauguraron el Mirador TEC, espacio interdisciplinario de tecnología e innovación donde FlexFlix lleva adelante Entre Ríos Aprende.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  FlexFlix.ai acompañó al Gobierno de Entre Ríos en la inauguración del Mirador TEC, un espacio interdisciplinario diseñado para acercar tecnología e innovación a toda la provincia. El acto contó con la presencia del gobernador Rogelio Frigerio y del referente provincial Emanuel Gainza.
+                </p>
+                <p>
+                  El Mirador TEC se convierte en el escenario principal de Entre Ríos Aprende, el programa con el que estudiantes de nivel primario de toda la provincia accederán a entrenamientos en pensamiento crítico y creativo con inteligencia artificial, bajo la metodología PACCC de FlexFlix.ai.
+                </p>
+                <p>
+                  "Agradecemos profundamente la confianza del gobernador Frigerio y de Emanuel Gainza en apostrar por una educación que no solo incorpora tecnología, sino que la gobierna pedagógicamente para que forme pensamiento real en cada estudiante", expresó el equipo de FlexFlix.ai durante la inauguración.
+                </p>
+                <p>
+                  Entre Ríos consolida así su posición como una de las provincias más comprometidas con la transformación educativa en la era de la IA generativa, con una apuesta que va más allá del acceso tecnológico para construir soberanía cognitiva desde la infancia.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 13 · Eventos — 18° Encuentro Empresarial CESSI -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0014_Fondo.png"
+                alt="18° Encuentro Empresarial CESSI Rosario"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">10 Abril 2026</span>
+                <span class="insight-card__location">Rosario, Argentina</span>
+              </div>
+              <h2 class="insight-card__title">
+                18° Encuentro Empresarial CESSI: la industria del software se reúne en Rosario
+              </h2>
+              <p class="insight-card__excerpt">
+                Networking, ideas que inspiran y una mirada estratégica sobre el futuro del sector. FlexFlix.ai presente en el encuentro que define la agenda de la industria del software en Argentina.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Arrancó el 18° Encuentro Empresarial de CESSI en Rosario, el evento que reúne anualmente a los líderes de la industria del software de Argentina. Reencuentros, conversaciones estratégicas y una agenda cargada de perspectivas sobre el presente y el futuro del sector tecnológico nacional.
+                </p>
+                <p>
+                  La inteligencia artificial como motor de crecimiento fue uno de los ejes centrales del encuentro. La discusión ya no gira en torno a si adoptar IA, sino a cómo hacerlo con criterio: con arquitectura, con gobernanza y con foco en el desarrollo de capacidades humanas reales.
+                </p>
+                <p>
+                  El encuentro, co-organizado junto al Polo Tecnológico Rosario, reunió referentes de todo el país bajo una perspectiva federal, reafirmando que la transformación digital no es patrimonio exclusivo de Buenos Aires sino una agenda que se construye desde cada rincón del territorio.
+                </p>
+                <p>
+                  FlexFlix.ai participó del evento compartiendo su visión sobre la Cognitive Governance Infrastructure y el rol de la industria tecnológica en la formación de las capacidades cognitivas que el país va a necesitar en la próxima década.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 · Investigación -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0001_Capa-3.png"
+                alt="IA en el aula"
+                loading="lazy"
+              />
+              <span class="insight-card__category">EVENTOS</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">3 Abril 2026</span>
+                <span class="insight-card__location">Provincia de MENDOZA</span>
+              </div>
+              <h2 class="insight-card__title">
+                IA Generativa en el aula: cómo evitar la trampa de la
+                automatización superficial
+              </h2>
+              <p class="insight-card__excerpt">
+                Cuando los estudiantes delegan comprensión antes de construir
+                criterio, la IA reemplaza el pensamiento en lugar de
+                amplificarlo.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Un estudio longitudinal realizado por el equipo de
+                  investigación de FlexFlix.ai en colaboración con tres
+                  universidades latinoamericanas identificó el patrón que
+                  denominamos "delegación prematura": estudiantes que utilizan
+                  herramientas de IA generativa antes de haber construido una
+                  base cognitiva propia sobre el tema.
+                </p>
+                <p>
+                  Los resultados son consistentes: cuando la delegación ocurre
+                  antes de la elaboración, los estudiantes producen respuestas
+                  superficialmente correctas pero sin capacidad de
+                  justificación, transferencia o aplicación en contextos nuevos.
+                  Su IDCA medido semanas después es significativamente menor que
+                  el de estudiantes que construyeron presaber primero.
+                </p>
+                <p>
+                  La investigación relevó tres errores recurrentes en la
+                  integración escolar de IA generativa:
+                </p>
+                <p>
+                  <strong>1. El error de la eficiencia</strong>: usar IA para
+                  ahorrar tiempo en tareas que son precisamente el espacio donde
+                  ocurre el aprendizaje.<br /><strong
+                    >2. El error de la velocidad</strong
+                  >: premiar la respuesta rápida en lugar de la comprensión
+                  profunda.<br /><strong
+                    >3. El error del andamiaje invertido</strong
+                  >: usar IA como punto de partida en lugar de como amplificador
+                  de lo ya comprendido.
+                </p>
+                <p>
+                  El protocolo PACCC fue diseñado específicamente para
+                  interrumpir estos patrones. Al separar estructuralmente las
+                  fases de aprendizaje autónomo, diálogo socrático y producción
+                  asistida por IA, garantiza que la delegación ocurra siempre
+                  después de la elaboración cognitiva propia.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2b · Articulos -->
+          <article class="insight-card" data-category="articulos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0004_Capa-12.png"
+                alt="FlexFlix en Mendoza"
+                loading="lazy"
+              />
+              <span class="insight-card__category">by Pablo Aristizabal</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">23 Marzo 2026</span>
+                <span class="insight-card__location">CABA</span>
+              </div>
+              <h2 class="insight-card__title">
+                Lo que nadie se atreve a decir en la educación: seguimos
+                formando consumidores.
+              </h2>
+              <p class="insight-card__excerpt">
+                La IA no perdona: o tenemos soberanía cognitiva o te convertís
+                en irrelevante. Basta de victimismo. ¿De qué lado estás
+                Argentina?
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Es una grave minimización creer que basta con aprender a usar
+                  la #IA porque siempre nos adaptamos a la tecnología. La IA no
+                  es una herramienta que se usa, es una infraestructura que nos
+                  modifica. Por primera vez, la tecnología se tiene que adaptar
+                  al ser humano bajo una gobernanza estricta: si la
+                  infraestructura elimina el esfuerzo de pensar, destruye
+                  nuestra soberanía cognitiva y puede disminuir nuestra
+                  humanidad
+                </p>
+
+                <p>
+                  Este doble reconocimiento es más que un honor: es una alegria
+                  y un premio a la perseverancia y pasión por los estudiantes y
+                  docentes.
+                </p>
+
+                <p>
+                  Con estos dos premios a FlexFlix sumamos 10 Premios Sadosky.
+                </p>
+
+                <p>
+                  Un impulso enorme para seguir liderando la transformación
+                  educativa desde Argentina hacia el mundo. 🌍🚀
+                </p>
+
+                <p>
+                  Gracias al equipazo de @flexflix.ai que hace posible vivir en
+                  un modo de invención constante ❤️
+                </p>
+
+                <p>
+                  Y también de quienes apuestan por el futuro del país:
+                  @mmechimiguel , @tadeo_gz , @emanuelgainza entre otros y a sus
+                  increíbles equipos . Gracias por habilitar oportunidades
+                  reales a docentes y estudiantes 🧠🚀
+                </p>
+
+                <p>
+                  Gracias al honorable jurado por acompañar esta visión y a todo
+                  el equipazo de @cessiargentina
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 · Investigación -->
+          <article class="insight-card" data-category="conferencias">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0004_Capa-10.png"
+                alt="IDCA"
+                loading="lazy"
+              />
+              <span class="insight-card__category">CONFERENCIAS</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">15 Marzo 2026</span>
+                <span class="insight-card__location"
+                  >Provincia de San Juan</span
+                >
+              </div>
+              <h2 class="insight-card__title">Congreso provincial de IA</h2>
+              <p class="insight-card__excerpt">
+                El Índice de Desarrollo Cognitivo Aumentado no mide actividad ni
+                tiempo en plataforma. Mide cómo piensa el estudiante a lo largo
+                del tiempo.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Las métricas educativas digitales actuales tienen un problema
+                  estructural: miden lo fácil de medir. Tiempo en plataforma,
+                  número de ejercicios completados, porcentaje de aciertos en
+                  preguntas cerradas. Ninguna de estas variables captura lo que
+                  realmente importa: si el estudiante está desarrollando
+                  capacidad de pensar de forma más compleja y autónoma.
+                </p>
+                <p>
+                  El IDCA (Índice de Desarrollo Cognitivo Aumentado) fue
+                  desarrollado por FlexFlix.ai para cubrir ese vacío. Su
+                  metodología combina evaluación pre/post intra-sujeto con
+                  análisis semántico del cuaderno personal del estudiante,
+                  rastreando tres dimensiones: profundidad argumentativa,
+                  transferencia conceptual y autonomía cognitiva.
+                </p>
+                <p>
+                  A diferencia de los tests estandarizados, el IDCA no mide
+                  contra un parámetro externo sino contra la propia línea de
+                  base del estudiante. Esto lo hace especialmente valioso en
+                  contextos de alta heterogeneidad, donde el progreso relativo
+                  es más significativo que la posición absoluta en una curva.
+                </p>
+                <p>
+                  Los primeros datos longitudinales de seis jurisdicciones
+                  muestran que el IDCA captura variaciones que otras métricas no
+                  detectan: estudiantes con alto rendimiento en tests
+                  convencionales a veces muestran IDCA estancado, mientras que
+                  estudiantes con historial de bajo rendimiento muestran
+                  crecimiento cognitivo sostenido bajo el protocolo PACCC.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 · CEO -->
+          <article class="insight-card" data-category="conferencias">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0005_Capa-9.png"
+                alt="Pablo Aristizábal"
+                loading="lazy"
+              />
+              <span class="insight-card__category">CONFERENCIAS</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">10 Febrero 2026</span>
+                <span class="insight-card__location"
+                  >Buenos Aires, Argentina</span
+                >
+              </div>
+              <h2 class="insight-card__title">COMO EDUCAR EN LA ERA DIGITAL</h2>
+              <p class="insight-card__excerpt">
+                No es una metodología más. Es un principio arquitectónico que
+                determina si la IA amplifica el pensamiento humano o lo
+                reemplaza.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  <em>Por Pablo Aristizábal, CEO y Fundador de FlexFlix.ai</em>
+                </p>
+                <p>
+                  Hay una pregunta que me obsesiona desde que empecé a trabajar
+                  en este problema: ¿cuándo la IA amplifica el pensamiento y
+                  cuándo lo reemplaza? Después de años de investigación y
+                  despliegue en seis jurisdicciones, la respuesta es
+                  sorprendentemente simple: depende del orden.
+                </p>
+                <p>
+                  Cuando un estudiante llega a una conversación con IA sin haber
+                  construido previamente una base cognitiva propia sobre el tema
+                  —sin haber pensado, sin haber tenido fricción, sin haber
+                  desarrollado presaber— la IA no puede amplificar nada porque
+                  no hay nada que amplificar. La IA simplemente llena el vacío.
+                  Y cuando eso pasa de forma sistemática, el estudiante deja de
+                  desarrollar la capacidad de llenar ese vacío por sí mismo.
+                </p>
+                <p>
+                  El principio "pensar primero, IA después" no es una
+                  restricción al uso de la tecnología. Es exactamente lo
+                  contrario: es la condición que hace posible que la tecnología
+                  funcione a su máximo potencial. Un estudiante que llega a
+                  FlexGPT con presaber construido, con preguntas propias y con
+                  hipótesis formuladas puede usar la IA socrática para ir mucho
+                  más profundo de lo que llegaría solo.
+                </p>
+                <p>
+                  Lo que estamos construyendo en FlexFlix.ai no es una
+                  plataforma de IA educativa. Es una infraestructura para
+                  proteger y desarrollar la capacidad humana de pensar en la era
+                  de la IA generativa. La diferencia no es semántica: determina
+                  cada decisión de diseño que tomamos.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 · Prensa -->
+          <article class="insight-card" data-category="conferencias">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0006_Capa-8.png"
+                alt="Plan Ceibal"
+                loading="lazy"
+              />
+              <span class="insight-card__category">CONFERENCIAS</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">22 Enero 2026</span>
+                <span class="insight-card__location">Montevideo, Uruguay</span>
+              </div>
+              <h2 class="insight-card__title">
+                masterclass: inteligencia artificial, fortaleciendo la capacidad
+                creativa
+              </h2>
+              <p class="insight-card__excerpt">
+                La infraestructura digital más consolidada de América Latina
+                incorpora la capa socrática de FlexFlix en un piloto con 12.000
+                estudiantes.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Plan Ceibal, el programa de integración tecnológica educativa
+                  de Uruguay que se ha convertido en referencia regional,
+                  anunció esta semana la incorporación de FlexGPT como motor
+                  socrático en su plataforma para educación media.
+                </p>
+                <p>
+                  El piloto inicial involucra a 12.000 estudiantes de ciclo
+                  básico en Montevideo y busca responder una pregunta
+                  específica: ¿qué pasa con el desarrollo del pensamiento
+                  crítico cuando el tutor de IA no responde las preguntas sino
+                  que las devuelve con mayor profundidad?
+                </p>
+                <p>
+                  El Director de Ceibal destacó que la decisión responde a una
+                  preocupación creciente en el sistema educativo uruguayo:
+                  "Teníamos herramientas de IA que eran muy buenas dando
+                  respuestas. Lo que no teníamos era una herramienta que fuera
+                  buena haciendo pensar. FlexGPT es socrática por diseño y eso
+                  cambia completamente la dinámica del aprendizaje."
+                </p>
+                <p>
+                  Los resultados preliminares del primer mes del piloto muestran
+                  un aumento del 28% en el tiempo de elaboración de respuestas
+                  por parte de los estudiantes y una reducción del 41% en las
+                  consultas repetidas al tutor IA sobre el mismo concepto,
+                  indicando mayor retención y comprensión.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 · Eventos -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0007_Capa-7.png"
+                alt="Foro Educación"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">5 Junio 2026</span>
+                <span class="insight-card__location">Bogotá, Colombia</span>
+              </div>
+              <h2 class="insight-card__title">
+                FlexFlix presenta en el Foro Internacional de Educación y
+                Tecnología Latam 2026
+              </h2>
+              <p class="insight-card__excerpt">
+                Pablo Aristizábal expondrá el modelo de gobernanza cognitiva
+                ante ministros y equipos técnicos de 14 países latinoamericanos.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  FlexFlix.ai fue seleccionada como una de las tres
+                  organizaciones que presentarán casos de transformación
+                  educativa con IA en el Foro Internacional de Educación y
+                  Tecnología Latam 2026, que se realizará los días 5 y 6 de
+                  junio en el Centro de Convenciones de Bogotá.
+                </p>
+                <p>
+                  Pablo Aristizábal participará en el panel "Soberanía cognitiva
+                  en la era de la IA generativa" junto a investigadores de la
+                  OCDE y representantes ministeriales de México, Brasil y
+                  Colombia. Su presentación se centrará en el marco conceptual
+                  de la Cognitive Governance Infrastructure y los datos
+                  longitudinales del IDCA en seis jurisdicciones.
+                </p>
+                <p>
+                  El evento reúne a ministros de educación, equipos técnicos y
+                  referentes académicos de 14 países. Para FlexFlix.ai
+                  representa una oportunidad de acelerar conversaciones con
+                  ministerios que ya han iniciado contacto para replicar el
+                  modelo de Mendoza en sus territorios.
+                </p>
+                <p>
+                  <strong
+                    >Para asistir al foro o solicitar una reunión bilateral en
+                    Bogotá, escribinos a
+                    <a href="mailto:pablo@flexflix.ai"
+                      >pablo@flexflix.ai</a
+                    ></strong
+                  >
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 · Prensa — Lima PotencIA -->
+          <article class="insight-card" data-category="prensa">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0002_REMOVE.png"
+                alt="Lima PotencIA"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Prensa</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">14 Abril 2026</span>
+                <span class="insight-card__location">Lima, Perú</span>
+              </div>
+              <h2 class="insight-card__title">
+                Lanzamiento oficial de Lima PotencIA: FlexFlix lleva gobernanza
+                cognitiva a la capital peruana
+              </h2>
+              <p class="insight-card__excerpt">
+                En alianza con +Ativa y el Ministerio de Educación del Perú, se
+                presentó el programa Lima PotencIA para incorporar el protocolo
+                PACCC en escuelas primarias de la metrópolis.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  El evento de lanzamiento de Lima PotencIA reunió a autoridades
+                  educativas, directores de escuela y referentes de tecnología
+                  educativa en un acto que marcó el inicio del despliegue más
+                  ambicioso de FlexFlix.ai en el Perú hasta la fecha.
+                </p>
+                <p>
+                  El programa, desarrollado en alianza con la fundación +Ativa,
+                  incorporará el protocolo PACCC y la plataforma FlexGPT en
+                  establecimientos educativos de Lima Metropolitana durante el
+                  ciclo 2026. La fase inicial involucra a 48 escuelas primarias
+                  y más de 15.000 estudiantes.
+                </p>
+                <p>
+                  "Lima tiene una característica única: es una ciudad de
+                  altísima heterogeneidad socioeconómica, y eso la convierte en
+                  el entorno más desafiante y más interesante para probar si la
+                  arquitectura cognitiva funciona independientemente del
+                  contexto. Los primeros datos de los pilotos previos nos dicen
+                  que sí", señaló Aristizábal durante el acto de lanzamiento.
+                </p>
+                <p>
+                  El programa contempla formación docente intensiva de 40 horas
+                  antes del inicio de cada cohorte y acompañamiento pedagógico
+                  semanal durante los primeros tres meses de implementación.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9 · Prensa — ER Aprende+ -->
+          <article class="insight-card" data-category="prensa">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0008_Capa-6.png"
+                alt="ER Aprende+"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Prensa</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">2 Marzo 2026</span>
+                <span class="insight-card__location">Paraná, Entre Ríos</span>
+              </div>
+              <h2 class="insight-card__title">
+                ER Aprende+ inicia su segunda cohorte con 3.800 estudiantes en
+                toda la provincia
+              </h2>
+              <p class="insight-card__excerpt">
+                El programa provincial de Entre Ríos amplía su alcance tras los
+                resultados de la primera cohorte: todos los indicadores IDCA
+                crecieron por encima de las metas planteadas.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  El Ministerio de Educación de Entre Ríos y FlexFlix.ai dieron
+                  inicio a la segunda cohorte del programa "ER Aprende+", que
+                  este año amplía su cobertura a 3.800 estudiantes de nivel
+                  primario en escuelas rurales y urbanas de toda la provincia.
+                </p>
+                <p>
+                  El acto de inicio reunió a docentes, directivos y estudiantes
+                  en un evento en Paraná donde se compartieron los resultados de
+                  la primera cohorte: el IDCA promedio creció un 28%
+                  intra-sujeto, y la capacidad de argumentación escrita —medida
+                  a través del análisis semántico del cuaderno digital— mostró
+                  mejoras significativas en el 73% de los estudiantes.
+                </p>
+                <p>
+                  "Lo que más nos sorprendió de la primera cohorte fue la
+                  consistencia del resultado en escuelas con contextos muy
+                  diferentes. Rural o urbana, baja o alta conectividad, el
+                  protocolo funciona porque lo que cambia es la calidad del
+                  pensamiento, no el acceso a la tecnología", expresó la
+                  directora provincial del programa.
+                </p>
+                <p>
+                  La segunda cohorte incorpora el módulo FlexGov para
+                  directores, que permitirá a los equipos de conducción seguir
+                  el progreso cognitivo de sus grupos en tiempo real a través de
+                  dashboards pedagógicos.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 · Eventos — Panel Series America -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0009_Capa-5.png"
+                alt="Series America panel"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">18 Febrero 2026</span>
+                <span class="insight-card__location">São Paulo, Brasil</span>
+              </div>
+              <h2 class="insight-card__title">
+                FlexFlix participa en el panel de credenciales digitales y
+                cognición de Series America
+              </h2>
+              <p class="insight-card__excerpt">
+                Pablo Aristizábal integró el panel de referentes de edtech
+                latinoamericano para debatir cómo medir lo que realmente importa
+                en la educación del siglo XXI.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  El evento Series America reunió en São Paulo a los principales
+                  referentes del ecosistema de tecnología educativa de América
+                  Latina. Pablo Aristizábal representó a FlexFlix.ai en el panel
+                  central del segundo día, dedicado a la pregunta que define la
+                  agenda del sector: ¿cómo medir el desarrollo cognitivo real en
+                  entornos saturados de IA?
+                </p>
+                <p>
+                  Aristizábal presentó el modelo IDCA como respuesta concreta a
+                  esa pregunta y planteó la distinción entre infraestructura de
+                  acceso y arquitectura cognitiva. "El problema de la educación
+                  digital latinoamericana no es el acceso. Es que hemos
+                  confundido acceso con aprendizaje, y plataformas con
+                  pedagogía", sostuvo ante los asistentes.
+                </p>
+                <p>
+                  El panel incluyó también a representantes de organizaciones de
+                  Colombia, Brasil y México, y generó una de las conversaciones
+                  más comentadas del evento en torno al concepto de soberanía
+                  cognitiva nacional como prioridad de política educativa.
+                </p>
+                <p>
+                  A partir de este encuentro, FlexFlix.ai inició conversaciones
+                  formales con dos ministerios de educación de países que no
+                  tienen presencia activa del modelo, previendo un despliegue en
+                  el segundo semestre de 2026.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11 · Eventos — Tu pasaporte al futuro -->
+          <article class="insight-card" data-category="eventos">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0010_remove-3.png"
+                alt="Tu pasaporte al futuro"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Eventos</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">5 Marzo 2026</span>
+                <span class="insight-card__location"
+                  >Entre Ríos, Argentina</span
+                >
+              </div>
+              <h2 class="insight-card__title">
+                "Tu pasaporte al futuro": lanzamiento masivo del programa de
+                competencias IA para jóvenes entrerrianos
+              </h2>
+              <p class="insight-card__excerpt">
+                El evento convocó a cientos de estudiantes secundarios para
+                presentar el programa que forma Operadores en IA con metodología
+                PACCC y certificación oficial.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  Bajo el lema "Tu pasaporte al futuro comienza hoy", el
+                  Ministerio de Educación de Entre Ríos y FlexFlix.ai lanzaron
+                  el programa de certificación en competencias de IA para
+                  estudiantes secundarios de la provincia, en un evento que
+                  reunió a más de 600 jóvenes, docentes y autoridades.
+                </p>
+                <p>
+                  El programa, enmarcado en la iniciativa ER Aprende+, ofrece a
+                  los estudiantes de los últimos años del secundario una
+                  certificación oficial como Operadores en IA —la primera de
+                  este tipo con validez jurisdiccional en Argentina— que
+                  acredita capacidad de trabajo crítico y estructurado con
+                  herramientas de inteligencia artificial.
+                </p>
+                <p>
+                  La certificación requiere completar las cinco etapas del
+                  protocolo PACCC, mantener un cuaderno cognitivo digital
+                  durante todo el proceso y alcanzar un umbral mínimo de
+                  crecimiento en el índice IDCA. No mide si el estudiante "sabe
+                  usar IA" — mide si aprendió a pensar mejor gracias a ella.
+                </p>
+                <p>
+                  "Esto no es un curso de herramientas. Es un programa de
+                  formación de pensamiento. Y eso lo hace diferente a todo lo
+                  que existe hoy en el mercado", afirmó Aristizábal durante el
+                  evento de lanzamiento.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12 · Prensa — Mendoza Aumentada presentación oficial -->
+          <article class="insight-card" data-category="prensa">
+            <div class="insight-card__img">
+              <img
+                src="assets/img/news_0011_Fondo.png"
+                alt="Mendoza Aumentada"
+                loading="lazy"
+              />
+              <span class="insight-card__category">Prensa</span>
+            </div>
+            <div class="insight-card__body">
+              <div class="insight-card__meta">
+                <span class="insight-card__date">20 Noviembre 2025</span>
+                <span class="insight-card__location">Mendoza, Argentina</span>
+              </div>
+              <h2 class="insight-card__title">
+                Mendoza Aumentada: presentación oficial ante autoridades del
+                Ministerio de Educación provincial
+              </h2>
+              <p class="insight-card__excerpt">
+                El acto formal marcó el inicio de la alianza entre FlexFlix.ai y
+                el gobierno de Mendoza para transformar la educación pública con
+                arquitectura cognitiva y gobernanza de IA.
+              </p>
+              <button class="insight-read-more" aria-expanded="false">
+                Leer más ↓
+              </button>
+              <div class="insight-card__full">
+                <p>
+                  En el edificio histórico del Ministerio de Educación de
+                  Mendoza, las autoridades provinciales y el equipo de
+                  FlexFlix.ai firmaron el acuerdo que da inicio formal al
+                  programa "Mendoza Aumentada", el proyecto de transformación
+                  educativa más ambicioso encarado por la provincia en la era de
+                  la IA.
+                </p>
+                <p>
+                  El acto contó con la presencia del Ministro de Educación
+                  provincial, el Subsecretario de Innovación Pedagógica y Pablo
+                  Aristizábal, quien presentó el marco conceptual de la
+                  Cognitive Governance Infrastructure y los resultados de los
+                  pilotos previos que justificaron la decisión de escalar el
+                  modelo a 100 escuelas secundarias.
+                </p>
+                <p>
+                  "Mendoza no eligió comprar tecnología. Eligió comprar
+                  arquitectura. La diferencia es que la tecnología te da acceso
+                  y la arquitectura te da resultados. En dos años vamos a poder
+                  demostrar con datos propios lo que ya vemos en los pilotos:
+                  que cuando el docente orquesta la secuencia cognitiva
+                  correctamente, todos los estudiantes avanzan", señaló
+                  Aristizábal.
+                </p>
+                <p>
+                  El programa contempla una inversión en formación docente
+                  equivalente al 40% del presupuesto total del proyecto, lo que
+                  refleja la convicción central de FlexFlix.ai: la tecnología
+                  amplifica al docente, no lo reemplaza.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- /insights-list -->
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a
+            href="index.html"
+            class="footer__logo-link"
+            aria-label="FlexFlix.ai inicio"
+          >
+            <img
+              src="assets/img/flexflix_logo2.png"
+              alt="FlexFlix"
+              class="nav__logo-img2"
+              height="32"
+              loading="lazy"
+            />
+          </a>
+          <span class="footer__tagline"
+            >Cognitive Governance Infrastructure</span
+          >
+          <a href="https://www.flexflix.ai/" class="footer__platform-link" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
+            flexflix.ai
+          </a>
+        </div>
+        <div class="footer__social" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/flexflixteens/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.youtube.com/@FlexFlixKids" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/YouTuBe.svg" alt="YouTube" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://twitter.com/FlexFlixTeens" class="social-link" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/X.svg" alt="X" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.facebook.com/FlexFlixKids/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Facebook.svg" alt="Facebook" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.tiktok.com/@flexflix.ai" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/TikTok.svg" alt="TikTok" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.twitch.tv/flexflixtv" class="social-link" aria-label="Twitch" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Twitch.svg" alt="Twitch" width="20" height="20" loading="lazy" />
+          </a>
+        </div>
+        <p class="footer__copy">
+          © 2026 FlexFlix. Todos los derechos reservados.
+        </p>
+        <div class="footer__links">
+          <a href="terminos.html">Términos</a>
+          <a href="privacidad.html">Privacidad</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="neural-cinematic.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // ── Expand artículo completo ──
+      document.querySelectorAll(".insight-read-more").forEach(function (btn) {
+        var full = btn.nextElementSibling;
+        gsap.set(full, { height: 0, overflow: "hidden" });
+
+        btn.addEventListener("click", function () {
+          var isOpen = btn.getAttribute("aria-expanded") === "true";
+          if (isOpen) {
+            gsap.to(full, { height: 0, duration: 0.36, ease: "power2.inOut" });
+            btn.setAttribute("aria-expanded", "false");
+            btn.textContent = "Leer más ↓";
+          } else {
+            gsap.set(full, { height: "auto" });
+            var h = full.offsetHeight;
+            gsap.fromTo(
+              full,
+              { height: 0 },
+              { height: h, duration: 0.4, ease: "power2.out" },
+            );
+            btn.setAttribute("aria-expanded", "true");
+            btn.textContent = "Cerrar ↑";
+          }
+        });
+      });
+
+      // ── Filtro por categoría ──
+      document.querySelectorAll(".insights-filter").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".insights-filter").forEach(function (b) {
+            b.classList.remove("is-active");
+          });
+          btn.classList.add("is-active");
+          var cat = btn.dataset.filter;
+          document.querySelectorAll(".insight-card").forEach(function (card) {
+            var match = cat === "todos" || card.dataset.category === cat;
+            if (match) {
+              card.style.display = "";
+              gsap.fromTo(
+                card,
+                { opacity: 0, y: 12 },
+                { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
+              );
+            } else {
+              gsap.to(card, {
+                opacity: 0,
+                y: 8,
+                duration: 0.2,
+                ease: "power2.in",
+                onComplete: function () {
+                  card.style.display = "none";
+                },
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

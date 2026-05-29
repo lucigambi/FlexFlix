@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conversemos — FlexFlix.ai. Iniciá la conversación sobre Cognitive Governance Infrastructure para tu institución educativa."
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Conversemos — FlexFlix.ai</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="neural-cinematic.css" />
+    <link rel="stylesheet" href="contacto.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="nb-texture" aria-hidden="true"></div>
+    <img class="nb-back nb-back--l" src="assets/img/side-back.png" aria-hidden="true" alt="" />
+    <img class="nb-back nb-back--r" src="assets/img/side-back.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-l1" src="assets/img/capa-neurona.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-r2" src="assets/img/capa-neurona.png" aria-hidden="true" alt="" />
+
+    <!-- NAV -->
+    <nav class="nav scrolled" id="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="FlexFlix inicio">
+          <img src="assets/img/flexflix_logo2.png" alt="FlexFlix" class="nav__logo-img2" height="36" />
+        </a>
+        <nav class="nav__links" aria-label="Secciones">
+          <a href="index.html#el-problema" class="nav__link">El problema</a>
+          <a href="index.html#solucion" class="nav__link">Solución</a>
+          <a href="index.html#arquitectura" class="nav__link">Arquitectura</a>
+          <a href="index.html#metodologia" class="nav__link">Metodología</a>
+          <a href="index.html#casos" class="nav__link">Casos</a>
+          <a href="index.html#para-quien" class="nav__link">Para quién</a>
+          <a href="insights.html" class="nav__link nav__link--insights">Insights</a>
+        </nav>
+        <a href="contacto.html" class="btn btn--nav">Conversemos</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu__nav">
+        <a href="index.html#el-problema" class="mobile-link"><span class="mobile-link__num">01</span><span class="mobile-link__text">El problema</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#solucion" class="mobile-link"><span class="mobile-link__num">02</span><span class="mobile-link__text">Solución</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#arquitectura" class="mobile-link"><span class="mobile-link__num">03</span><span class="mobile-link__text">Arquitectura</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#metodologia" class="mobile-link"><span class="mobile-link__num">04</span><span class="mobile-link__text">Metodología</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#casos" class="mobile-link"><span class="mobile-link__num">05</span><span class="mobile-link__text">Casos</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="index.html#para-quien" class="mobile-link"><span class="mobile-link__num">06</span><span class="mobile-link__text">Para quién</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="insights.html" class="mobile-link mobile-link--insights"><span class="mobile-link__num">07</span><span class="mobile-link__text">Insights</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a href="contacto.html" class="mobile-link--cta">Conversemos</a>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+
+        <header class="contacto-hero">
+          <span class="contacto-hero__label">FlexFlix.ai · Contacto</span>
+          <h1 class="contacto-hero__title">Conversemos</h1>
+          <p class="contacto-hero__sub">Contanos sobre tu institución y te respondemos a la brevedad.</p>
+        </header>
+
+        <div class="contacto-wrap">
+
+          <!-- Formulario -->
+          <div>
+            <form
+              class="contacto-form"
+              id="contacto-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input type="hidden" name="access_key" value="TU_CLAVE_AQUI" />
+              <input type="hidden" name="subject" value="Nueva consulta FlexFlix.ai" />
+              <input type="hidden" name="from_name" value="FlexFlix.ai — Formulario de contacto" />
+              <div class="form-grid">
+
+                <div class="form-field">
+                  <label class="form-label" for="nombre">Nombre de contacto</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre completo"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="email">Correo electrónico</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="colegio">Institución / Colegio</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="colegio"
+                    name="colegio"
+                    placeholder="Nombre de tu institución"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="cargo">Cargo</label>
+                  <div class="form-select-wrap">
+                    <select class="form-select" id="cargo" name="cargo" required>
+                      <option value="" disabled selected>Seleccioná tu cargo</option>
+                      <option>Ministro / Ministra de Educación</option>
+                      <option>Director / Directora</option>
+                      <option>Rector / Rectora</option>
+                      <option>Coordinador/a pedagógico</option>
+                      <option>Docente</option>
+                      <option>Referente tecnológico</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field form-field--full">
+                  <label class="form-label" for="provincia">Provincia / País</label>
+                  <div class="form-select-wrap">
+                    <select class="form-select" id="provincia" name="provincia" required>
+                      <option value="" disabled selected>Seleccioná tu provincia o país</option>
+                      <optgroup label="Argentina">
+                        <option>Buenos Aires</option>
+                        <option>CABA</option>
+                        <option>Catamarca</option>
+                        <option>Chaco</option>
+                        <option>Chubut</option>
+                        <option>Córdoba</option>
+                        <option>Corrientes</option>
+                        <option>Entre Ríos</option>
+                        <option>Formosa</option>
+                        <option>Jujuy</option>
+                        <option>La Pampa</option>
+                        <option>La Rioja</option>
+                        <option>Mendoza</option>
+                        <option>Misiones</option>
+                        <option>Neuquén</option>
+                        <option>Río Negro</option>
+                        <option>Salta</option>
+                        <option>San Juan</option>
+                        <option>San Luis</option>
+                        <option>Santa Cruz</option>
+                        <option>Santa Fe</option>
+                        <option>Santiago del Estero</option>
+                        <option>Tierra del Fuego</option>
+                        <option>Tucumán</option>
+                      </optgroup>
+                      <optgroup label="Otros países">
+                        <option>Uruguay</option>
+                        <option>Chile</option>
+                        <option>Perú</option>
+                        <option>Colombia</option>
+                        <option>México</option>
+                        <option>Brasil</option>
+                        <option>España</option>
+                        <option>Otro</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field form-field--full">
+                  <label class="form-label" for="comentarios">Comentarios</label>
+                  <textarea
+                    class="form-textarea"
+                    id="comentarios"
+                    name="comentarios"
+                    placeholder="Contanos sobre tu institución, el contexto y lo que estás buscando…"
+                  ></textarea>
+                </div>
+
+                <div class="form-divider"></div>
+
+                <div class="form-field form-field--full">
+                  <button type="submit" class="form-submit">
+                    Enviá tu consulta →
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+            <!-- Mensaje de éxito -->
+            <div class="form-success" id="form-success" role="alert">
+              <div class="form-success__icon">✓</div>
+              <h2 class="form-success__title">¡Mensaje enviado!</h2>
+              <p class="form-success__text">Recibimos tu consulta. Te respondemos a la brevedad en <strong>contacto@flexflix.ai</strong>.</p>
+            </div>
+          </div>
+
+          <!-- Panel lateral -->
+          <aside class="contacto-aside">
+
+            <div class="contacto-aside__card">
+              <span class="contacto-aside__label">El proceso</span>
+              <h2 class="contacto-aside__title">Tres reuniones. Resultados reales.</h2>
+              <div class="contacto-aside__steps">
+                <div class="contacto-step">
+                  <span class="contacto-step__num">01</span>
+                  <div class="contacto-step__text">
+                    <strong>Sesión de diagnóstico</strong>
+                    Mapeamos tu contexto, desafíos y objetivos institucionales.
+                  </div>
+                </div>
+                <div class="contacto-step">
+                  <span class="contacto-step__num">02</span>
+                  <div class="contacto-step__text">
+                    <strong>Demo con cohorte real</strong>
+                    FlexGPT en acción con estudiantes reales y métricas IDCA visibles.
+                  </div>
+                </div>
+                <div class="contacto-step">
+                  <span class="contacto-step__num">03</span>
+                  <div class="contacto-step__text">
+                    <strong>Diseño de piloto</strong>
+                    Alcance, cronograma, métricas e integración definidos juntos.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacto-aside__card">
+              <span class="contacto-aside__label">Contacto directo</span>
+              <a href="mailto:contacto@flexflix.ai" class="contacto-aside__email">
+                contacto@flexflix.ai →
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-link" aria-label="FlexFlix.ai inicio">
+            <img src="assets/img/flexflix_logo2.png" alt="FlexFlix" class="nav__logo-img2" height="32" loading="lazy" />
+          </a>
+          <span class="footer__tagline">Cognitive Governance Infrastructure</span>
+          <a href="https://www.flexflix.ai/" class="footer__platform-link" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
+            flexflix.ai
+          </a>
+        </div>
+        <div class="footer__social" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/flexflixteens/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.youtube.com/@FlexFlixKids" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/YouTuBe.svg" alt="YouTube" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://twitter.com/FlexFlixTeens" class="social-link" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/X.svg" alt="X" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.facebook.com/FlexFlixKids/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Facebook.svg" alt="Facebook" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.tiktok.com/@flexflix.ai" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/TikTok.svg" alt="TikTok" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.twitch.tv/flexflixtv" class="social-link" aria-label="Twitch" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Twitch.svg" alt="Twitch" width="20" height="20" loading="lazy" />
+          </a>
+        </div>
+        <p class="footer__copy">© 2026 FlexFlix. Todos los derechos reservados.</p>
+        <div class="footer__links">
+          <a href="terminos.html">Términos</a>
+          <a href="privacidad.html">Privacidad</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="neural-cinematic.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // Web3Forms — submit AJAX y mostrar mensaje de éxito
+      var form = document.getElementById('contacto-form');
+      var success = document.getElementById('form-success');
+      var submitBtn = form ? form.querySelector('.form-submit') : null;
+
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          submitBtn.textContent = 'Enviando…';
+          submitBtn.disabled = true;
+
+          try {
+            var res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: new FormData(form)
+            });
+            var data = await res.json();
+            if (data.success) {
+              form.style.display = 'none';
+              success.classList.add('is-visible');
+            } else {
+              submitBtn.textContent = 'Error al enviar. Intentá de nuevo →';
+              submitBtn.disabled = false;
+            }
+          } catch (err) {
+            submitBtn.textContent = 'Error al enviar. Intentá de nuevo →';
+            submitBtn.disabled = false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

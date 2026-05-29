@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FlexFlix.ai — Cognitive Governance Infrastructure. La arquitectura que transforma la inteligencia artificial en aprendizaje real."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#9773D4" />
+    <meta name="author" content="Pablo Aristizábal" />
+    <meta
+      property="og:title"
+      content="FlexFlix.ai — Cognitive Governance Infrastructure"
+    />
+    <meta
+      property="og:description"
+      content="La arquitectura que transforma la inteligencia artificial en aprendizaje real. PACCC · FlexGPT · IDCA · FlexMind · FlexGov."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.flexflix.ai/" />
+    <meta property="og:image" content="assets/img/og-cover.jpg" />
+    <meta property="og:site_name" content="FlexFlix.ai" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="FlexFlix.ai — Cognitive Governance Infrastructure"
+    />
+    <meta
+      name="twitter:description"
+      content="La arquitectura que transforma la inteligencia artificial en aprendizaje real."
+    />
+    <meta name="twitter:image" content="assets/img/og-cover.jpg" />
+    <title>FlexFlix.ai — Cognitive Governance Infrastructure</title>
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="mask-icon"
+      href="assets/favicon/safari-pinned-tab.svg"
+      color="#9773D4"
+    />
+    <!-- Fonts: Barlow + Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=159" />
+    <link rel="stylesheet" href="neural-cinematic.css?v=69" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FlexFlix.ai",
+        "url": "https://www.flexflix.ai",
+        "logo": "https://www.flexflix.ai/assets/img/flexflix_logo.png",
+        "description": "Cognitive Governance Infrastructure — La arquitectura que transforma la inteligencia artificial en aprendizaje real.",
+        "founder": { "@type": "Person", "name": "Pablo Aristizábal" },
+        "sameAs": ["https://www.flexflix.tv"]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Noise grain overlay -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Textura de fondo — capa lenta para profundidad extra -->
+    <div class="nb-texture" aria-hidden="true"></div>
+
+    <!-- Plano de fondo — izquierda y derecha espejada, velocidad más lenta -->
+    <img class="nb-back nb-back--l" src="assets/img/side-back.png" aria-hidden="true" alt="" />
+    <img class="nb-back nb-back--r" src="assets/img/side-back.png" aria-hidden="true" alt="" />
+
+    <!-- Neural parallax background — imgs directos en body (sin wrapper) para que mix-blend-mode:screen funcione contra el backdrop raíz -->
+    <img class="nb-neuron nb-l1" src="assets/img/capa-neurona.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-l2" src="assets/img/capa-neurona-blur.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-l3" src="assets/img/capa-neurona.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-r1" src="assets/img/capa-neurona-blur.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-r2" src="assets/img/capa-neurona.png" aria-hidden="true" alt="" />
+    <img class="nb-neuron nb-r3" src="assets/img/capa-neurona-blur.png" aria-hidden="true" alt="" />
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- =================== NAV =================== -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#hero" class="nav__logo" aria-label="FlexFlix inicio">
+          <img
+            src="assets/img/flexflix_logo2.png"
+            alt="FlexFlix"
+            class="nav__logo-img2"
+            height="36"
+          />
+        </a>
+        <nav class="nav__links" aria-label="Secciones">
+          <a href="#el-problema" class="nav__link">El problema</a>
+          <a href="#solucion" class="nav__link">Solución</a>
+          <a href="#arquitectura" class="nav__link">Arquitectura</a>
+          <a href="#metodologia" class="nav__link">Metodología</a>
+          <a href="#casos" class="nav__link">Casos</a>
+          <a href="#para-quien" class="nav__link">Para quién</a>
+          <a href="insights.html" class="nav__link nav__link--insights">Insights</a>
+        </nav>
+        <a href="contacto.html" class="btn btn--nav">Conversemos</a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu__nav">
+        <a href="#el-problema" class="mobile-link"><span class="mobile-link__num">01</span><span class="mobile-link__text">El problema</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="#solucion" class="mobile-link"><span class="mobile-link__num">02</span><span class="mobile-link__text">Solución</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="#arquitectura" class="mobile-link"><span class="mobile-link__num">03</span><span class="mobile-link__text">Arquitectura</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="#metodologia" class="mobile-link"><span class="mobile-link__num">04</span><span class="mobile-link__text">Metodología</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="#casos" class="mobile-link"><span class="mobile-link__num">05</span><span class="mobile-link__text">Casos</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="#para-quien" class="mobile-link"><span class="mobile-link__num">06</span><span class="mobile-link__text">Para quién</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+        <a href="insights.html" class="mobile-link mobile-link--insights"><span class="mobile-link__num">07</span><span class="mobile-link__text">Insights</span><span class="mobile-link__arrow" aria-hidden="true">→</span></a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a href="contacto.html" class="mobile-link--cta">Conversemos</a>
+      </div>
+    </div>
+
+    <main>
+      <!-- =================== FX DEPTH — Hero =================== -->
+      <section class="fx-depth" id="fx-depth">
+        <div class="fx-depth__stage">
+          <video class="fx-depth__video fx-depth__video--desk" autoplay muted loop playsinline>
+            <source src="assets/video/FINAAL.mp4" type="video/mp4" />
+          </video>
+          <video class="fx-depth__video fx-depth__video--mob" autoplay muted loop playsinline>
+            <source src="assets/video/FINAL2.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="fx-depth__content">
+          <span class="fx-depth__label">Cognitive Governance Infrastructure</span>
+          <h1 class="fx-depth__title">
+            Sin arquitectura, <br />la IA automatiza. <br /><span class="fx-depth__title-highlight">Con arquitectura cognitiva,<br />la IA forma pensamiento.</span>
+          </h1>
+          <p class="fx-depth__desc">
+           FlexFlix es la arquitectura de gobernanza cognitiva para la era de la IA generativa: la infraestructura que permite que los sistemas educativos mantengan su soberanía cognitiva, formen pensamiento humano y midan su desarrollo cognitivo real.
+          </p>
+          <a class="fx-depth__cta" href="#metodologia">Explorar metodología</a>
+        </div>
+      </section>
+
+      <!-- =================== EL PROBLEMA =================== -->
+      <section id="el-problema" class="section" aria-label="El problema de delegar comprensión">
+
+        <!-- Infografia fuera del container: position:absolute relativo a la sección -->
+        <div class="infografia-wrap" aria-hidden="true">
+          <img
+            src="assets/img/info-antes-despues.png"
+            alt=""
+            class="infografia-img"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <span class="chapter-label">La IA no es el problema</span>
+            <h2 class="section-title">
+              Delegar comprensión<br />
+              antes de desarrollar criterio
+            </h2>
+            <p class="section-intro">Cuando las personas empiezan a delegar comprensión
+              antes de desarrollar criterio, la IA deja de amplificar
+              y empieza a reemplazar el pensamiento</p>
+          </div>
+
+          <div class="sol-hero sol-hero--plain" data-animate="fade-up">
+
+            <div class="sol-hero__col sol-hero__col--against">
+              <h3 class="sol-subtitle">
+                <img src="assets/img/x.svg" class="sol-col-icon" aria-hidden="true" alt="" />
+                <span class="sol-subtitle__bar" aria-hidden="true"></span>
+                Sin arquitectura cognitiva
+              </h3>
+              <div class="sol-statement">
+                <span class="sol-statement__line sol-statement__line--light">IA que reemplaza</span>
+                <span class="sol-statement__line sol-statement__line--accent">Aceptar antes de cuestionar</span>
+              </div>
+              <p class="sol-body">La IA es inteligencia aumentada, exocerebro, continuidad cognitiva del cerebro humano. Esa extensión <em>reemplaza</em> pensamiento cuando se delega sin pensar — cuando el alumno consulta antes de elaborar, acepta antes de cuestionar.</p>
+            </div>
+
+            <div class="sol-hero__col">
+              <h3 class="sol-subtitle">
+                <img src="assets/img/check.svg" class="sol-col-icon" aria-hidden="true" alt="" />
+                <span class="sol-subtitle__bar" aria-hidden="true"></span>
+                Good friction
+              </h3>
+              <div class="sol-statement">
+                <span class="sol-statement__line sol-statement__line--light">La fricción</span>
+                <span class="sol-statement__line sol-statement__line--accent">en la era de la IA generativa.</span>
+              </div>
+              <p class="sol-body">FlexFlix está construido sobre el principio de <em>good friction</em>: la fricción que obliga al alumno a pensar antes de consultar, a justificar antes de aceptar, a preguntar antes de pedir respuesta. Es la condición de toda formación cognitiva en la era de la IA generativa.</p>
+            </div>
+
+          </div>
+
+    
+        </div>
+      </section>
+
+      <!-- =================== II · NUESTRA SOLUCIÓN =================== -->
+      <section id="solucion" class="section" aria-label="Nuestra solución">
+        <div class="container">
+
+          <!-- Header -->
+          <div class="section-header">
+            <span class="chapter-label">Nuestra solución</span>
+            <h2 class="section-title">Cognitive Governance Infrastructure.</h2>
+            <p class="section-intro">
+*Soberanía cognitiva* es la capacidad de un sistema educativo de formar pensamiento autónomo en sus estudiantes y de auditar ese proceso con métricas propias, sin delegarlo a la lógica de proveedores de IA externos.</p>
+          </div>
+
+          <!-- Tres columnas: texto | imagen central | texto -->
+          <div class="sol-hero">
+            <div class="sol-hero__col">
+              <h3 class="sol-subtitle">Una nueva categoría</h3>
+              <div class="sol-statement">
+                <span class="sol-statement__line sol-statement__line--light">Otros entregan respuestas.</span>
+                <span class="sol-statement__line sol-statement__line--accent">Nosotros formamos criterio.</span>
+              </div>
+              <p class="sol-body">No es una plataforma. No es un tutor IA. No es un LMS. Es una infraestructura diseñada para preservar, desarrollar, medir y amplificar la capacidad humana de pensar en la era de la inteligencia artificial.</p>
+            </div>
+
+            <div class="sol-hero__col">
+              <h3 class="sol-subtitle">El principio arquitectónico que organiza todo</h3>
+              <div class="sol-statement">
+                <span class="sol-statement__line sol-statement__line--light">Pensar primero.</span>
+                <span class="sol-statement__line sol-statement__line--accent">IA después.</span>
+              </div>
+              <p class="sol-body">Cuando la delegación ocurre antes de la comprensión, la IA automatiza superficialidad. Cuando ocurre después de la elaboración cognitiva, la IA amplifica pensamiento complejo, creatividad y construcción de conocimiento.</p>
+            </div>
+          </div>
+
+          <!-- Tres cards — Nuestra Solución -->
+          <div class="sol-cards-v2">
+
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-regular.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" /></svg>
+                  <span class="fx-card__tag">Nuestra Solución</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">01</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Regular</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />Secuencias cognitivas controladas</li>
+                  <li><img src="assets/img/check.svg" alt="" />Filtros de profundidad y pertinencia</li>
+                  <li><img src="assets/img/check.svg" alt="" />Delegación consciente y trazable</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-amplificar.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V5" /><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" /><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" /><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" /><path d="M18 18a4 4 0 0 0 2-7.464" /><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" /><path d="M6 18a4 4 0 0 1-2-7.464" /><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" /></svg>
+                  <span class="fx-card__tag">Nuestra Solución</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">02</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Amplificar</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />IA como amplificador, no sustituto</li>
+                  <li><img src="assets/img/check.svg" alt="" />Potencia del juicio y la creatividad docente</li>
+                  <li><img src="assets/img/check.svg" alt="" />Co-construcción cognitiva inteligente</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-medir.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z" /><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /></svg>
+                  <span class="fx-card__tag">Nuestra Solución</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">03</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Medir</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />Índice de Desarrollo Cognitivo Autónomo (IDCA)</li>
+                  <li><img src="assets/img/check.svg" alt="" />Trazabilidad longitudinal real</li>
+                  <li><img src="assets/img/check.svg" alt="" />Analítica cognitiva profunda</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =================== IV · LA ARQUITECTURA =================== -->
+      <section id="arquitectura" class="section" aria-label="La arquitectura">
+
+        <!-- Imagen de fondo fuera del container -->
+        <div class="arq-img-col">
+          <img
+            src="assets/img/7capas.png"
+            alt=""
+            loading="lazy"
+            aria-hidden="true"
+          />
+        </div>
+
+        <div class="container">
+
+          <div class="section-header" data-animate="fade-up">
+            <span class="chapter-label chapter-label--cyan">La arquitectura</span>
+            <h2 class="section-title">
+              Siete capas integradas. Una infraestructura<br />
+              que gobierna la formación cognitiva<br />
+            </h2>
+            <p class="section-intro">
+              La arquitectura opera en siete capas integradas. Un ecosistema cerrado, seguro y evolutivo que genera aprendizaje real, medible y escalable.
+            </p>
+          </div>
+
+          <div class="arq-body" data-animate="fade-up">
+            <div class="arq-accordion">
+
+              <!-- 01 · SVOD Educativo -->
+              <details class="arq-row arq-row--01">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">01</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <span class="arq-name">SVOD Educativo</span>
+                      <span class="arq-desc">Base curricular multimodal de calidad cinematográfica</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel">
+                  <div>
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc">Plataforma de streaming educativo de <strong>calidad cinematográfica</strong>. Contenido curricular curado audiovisualmente que construye la base cognitiva desde la cual todos los alumnos piensan, conversan y crean.</p>
+                    <div class="arq-panel-chips">
+                      <span class="arq-panel-chip">Streaming</span>
+                      <span class="arq-panel-chip">Multimodal</span>
+                      <span class="arq-panel-chip">Curación experta</span>
+                      <span class="arq-panel-chip">Video + Texto + Simulaciones</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="arq-panel-title">Características</p>
+                    <ul class="arq-panel-features">
+                      <li>Contenido audiovisual de calidad cinematográfica producido o curado pedagógicamente</li>
+                      <li>Homogeniza el punto de partida del grupo antes de la conversación con IA</li>
+                      <li>Multimodalidad: video, texto, simulaciones interactivas, animaciones</li>
+                      <li>Secuenciación curricular por nivel, materia y perfil cognitivo</li>
+                      <li>Base compatible y sincronizada con el motor PACCC</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 02 · FlexClass · PACCC -->
+              <details class="arq-row arq-row--02">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">02</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <span class="arq-name">FlexClass · PACCC</span>
+                      <span class="arq-desc">Protocolo de interacción cognitiva</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel">
+                  <div>
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc">El motor operativo que organiza la <strong>experiencia cognitiva en el aula</strong>. Un protocolo de 5 pasos que transforma cada clase en una sesión de pensamiento estructurado.</p>
+                    <div class="arq-paccc-mini">
+                      <div class="arq-paccc-item"><span class="arq-paccc-letter">P</span><span class="arq-paccc-name">Personaliza</span></div>
+                      <div class="arq-paccc-item"><span class="arq-paccc-letter">A</span><span class="arq-paccc-name">Aprende</span></div>
+                      <div class="arq-paccc-item"><span class="arq-paccc-letter">C</span><span class="arq-paccc-name">Conversa</span></div>
+                      <div class="arq-paccc-item"><span class="arq-paccc-letter">C</span><span class="arq-paccc-name">Crea</span></div>
+                      <div class="arq-paccc-item"><span class="arq-paccc-letter">C</span><span class="arq-paccc-name">Comparte</span></div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="arq-panel-title">Los 5 pasos</p>
+                    <ul class="arq-panel-features">
+                      <li><strong>Personaliza:</strong> el docente orquesta la experiencia, elige preguntas, herramientas y tiempos</li>
+                      <li><strong>Aprende:</strong> el alumno construye presaber con contenido curado antes de tocar la IA</li>
+                      <li><strong>Conversa:</strong> dialoga con FlexGPT socrático que repregunta en lugar de responder</li>
+                      <li><strong>Crea:</strong> produce desde su comprensión — no desde el vacío ni copiando a la IA</li>
+                      <li><strong>Comparte:</strong> entrega, recibe feedback del docente, el sistema calcula el IDCA</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 03 · FlexGPT -->
+              <details class="arq-row arq-row--03 arq-row--featured">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">03</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <div class="arq-name-row">
+                        <span class="arq-name">FlexGPT</span>
+                        <span class="arq-badge">Diferenciador radical</span>
+                      </div>
+                      <span class="arq-desc">Capa socrática agnóstica de modelos</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel arq-panel--wide">
+                  <div style="grid-column:1/-1">
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc" style="margin-bottom:16px">Capa socrática <strong>agnóstica de modelos</strong>. A diferencia de cualquier IA tutora del mercado, FlexGPT no responde: repregunta. Optimiza para que el estudiante elabore la respuesta, no para entregársela.</p>
+                  </div>
+                  <div class="arq-compare-grid">
+                    <div class="arq-compare-col arq-compare-col--against">
+                      <span class="arq-compare-tag">Tutor IA convencional</span>
+                      <ul class="arq-compare-list">
+                        <li><span class="ico">✕</span>Resuelve la pregunta del estudiante</li>
+                        <li><span class="ico">✕</span>Premia la velocidad de respuesta</li>
+                        <li><span class="ico">✕</span>Reduce la fricción cognitiva</li>
+                        <li><span class="ico">✕</span>El estudiante recibe en lugar de elaborar</li>
+                        <li><span class="ico">✕</span>Atado a un solo modelo de IA</li>
+                      </ul>
+                    </div>
+                    <div class="arq-compare-col arq-compare-col--for">
+                      <span class="arq-compare-tag">FlexGPT · Capa socrática</span>
+                      <ul class="arq-compare-list">
+                        <li><span class="ico">✓</span>Le pide justificación a cada afirmación</li>
+                        <li><span class="ico">✓</span>Devuelve preguntas más profundas ante respuestas superficiales</li>
+                        <li><span class="ico">✓</span>Hace visibles las contradicciones del alumno</li>
+                        <li><span class="ico">✓</span>Sostiene la fricción cognitiva productiva</li>
+                        <li><span class="ico">✓</span>Agnóstica: funciona con GPT-4, Gemini, Claude, etc.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 04 · FlexFlow -->
+              <details class="arq-row arq-row--04">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">04</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <span class="arq-name">FlexFlow</span>
+                      <span class="arq-desc">Workflows · rúbricas · activación de hábitos</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel">
+                  <div>
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc">Sistema de <strong>workflows pedagógicos, rúbricas de evaluación y activación de hábitos cognitivos</strong>. Automatiza la secuencia de aprendizaje sin quitar el control al docente.</p>
+                    <div class="arq-panel-chips">
+                      <span class="arq-panel-chip">Workflows</span>
+                      <span class="arq-panel-chip">Rúbricas</span>
+                      <span class="arq-panel-chip">Hábitos</span>
+                      <span class="arq-panel-chip">Automatización</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="arq-panel-title">Características</p>
+                    <ul class="arq-panel-features">
+                      <li>Diseño de flujos de aprendizaje personalizados por nivel y materia</li>
+                      <li>Rúbricas de evaluación del desarrollo cognitivo integradas al IDCA</li>
+                      <li>Activación de hábitos cognitivos: práctica espaciada, recuperación activa, elaboración</li>
+                      <li>Automatización pedagógica que libera al docente para el feedback humano</li>
+                      <li>Sincronización directa con el ciclo PACCC y las capas de medición</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 05 · FlexMind · IDCA -->
+              <details class="arq-row arq-row--05">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">05</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <span class="arq-name">FlexMind · IDCA</span>
+                      <span class="arq-desc">Índice de Desarrollo Cognitivo Aumentado</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel arq-panel--wide">
+                  <div style="grid-column:1/-1">
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc" style="margin-bottom:16px"><strong>Índice de Desarrollo Cognitivo Aumentado</strong> — la métrica que faltaba en la educación. No mide lo que el estudiante hace. Mide cómo piensa.</p>
+                  </div>
+                  <div class="arq-idca-mini">
+                    <div class="arq-idca-card arq-idca-card--no">
+                      <span class="arq-idca-label">✕ No mide</span>
+                      <span>Actividad. Tiempo en plataforma. Respuestas cerradas. Rendimiento superficial. Cuántas tareas completó.</span>
+                    </div>
+                    <div class="arq-idca-card arq-idca-card--si">
+                      <span class="arq-idca-label">✓ Mide</span>
+                      <span>Externalización del pensamiento. Cómo el estudiante elabora con sus propias palabras a lo largo del tiempo. Profundidad argumentativa.</span>
+                    </div>
+                    <div class="arq-idca-card arq-idca-card--how">
+                      <span class="arq-idca-label">→ Cómo</span>
+                      <span>Evaluación pre/post intra-sujeto + análisis semántico conceptual del cuaderno personal del estudiante a lo largo del tiempo.</span>
+                    </div>
+                  </div>
+                  <div style="grid-column:1/-1; margin-top:16px; border-radius:12px; overflow:hidden;">
+                    <img src="assets/img/card-idca.png" alt="IDCA" style="width:100%; height:auto; display:block;" loading="lazy" />
+                  </div>
+                </div>
+              </details>
+
+              <!-- 06 · FlexGov -->
+              <details class="arq-row arq-row--06">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">06</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <span class="arq-name">FlexGov</span>
+                      <span class="arq-desc">Dashboards ministeriales · auditoría · benchmark</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel">
+                  <div>
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc">Capa de <strong>gobierno institucional y ministerial</strong> del ecosistema cognitivo. Dashboards en tiempo real, auditoría del aprendizaje y benchmark entre instituciones con soberanía de datos garantizada.</p>
+                    <div class="arq-panel-chips">
+                      <span class="arq-panel-chip">Dashboards</span>
+                      <span class="arq-panel-chip">Auditoría</span>
+                      <span class="arq-panel-chip">Benchmark</span>
+                      <span class="arq-panel-chip">Soberanía de datos</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="arq-panel-title">Características</p>
+                    <ul class="arq-panel-features">
+                      <li>Dashboards ministeriales con métricas de desarrollo cognitivo en tiempo real</li>
+                      <li>Auditoría de aprendizaje: qué se enseñó, qué se aprendió, qué se midió</li>
+                      <li>Benchmark entre instituciones con datos anonimizados y comparables</li>
+                      <li>Soberanía cognitiva: los datos son de la institución, no de FlexFlix</li>
+                      <li>Reportes de impacto exportables para ministerios y financiadores</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+              <!-- 07 · FlexAgents -->
+              <details class="arq-row arq-row--07">
+                <summary>
+                  <div class="arq-info">
+                    <span class="arq-num">07</span>
+                    <span class="arq-dot" aria-hidden="true"></span>
+                    <div class="arq-text">
+                      <span class="arq-name">FlexAgents</span>
+                      <span class="arq-desc">IA agéntica con human-in-the-loop</span>
+                    </div>
+                  </div>
+                  <span class="arq-toggle" aria-hidden="true"></span>
+                </summary>
+                <div class="arq-panel-divider"></div>
+                <div class="arq-panel">
+                  <div>
+                    <p class="arq-panel-title">¿Qué es?</p>
+                    <p class="arq-panel-desc">Agentes de IA <strong>autónomos con supervisión humana</strong> (human-in-the-loop) que automatizan tareas administrativas, pedagógicas y de análisis — sin delegar las decisiones críticas.</p>
+                    <div class="arq-panel-chips">
+                      <span class="arq-panel-chip">IA agéntica</span>
+                      <span class="arq-panel-chip">Human-in-the-loop</span>
+                      <span class="arq-panel-chip">Autónomo + controlado</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="arq-panel-title">Características</p>
+                    <ul class="arq-panel-features">
+                      <li>Agentes especializados por función: docencia, evaluación, administración, análisis</li>
+                      <li>Human-in-the-loop: el humano aprueba decisiones críticas, el agente ejecuta</li>
+                      <li>Automatización de correcciones rutinarias y generación de feedback inicial</li>
+                      <li>Análisis longitudinal del IDCA a escala masiva sin intervención manual</li>
+                      <li>Integración nativa con todas las capas del ecosistema FlexFlix</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+
+            </div><!-- /arq-accordion -->
+          </div><!-- /arq-body -->
+        </div><!-- /container -->
+      </section>
+
+      <!-- =================== FLEXGPT =================== -->
+      <section id="flexgpt" class="section" aria-label="FlexGPT capa socrática">
+        <div class="container">
+
+          <div class="section-header" data-animate="fade-up">
+            <span class="chapter-label chapter-label--cyan">La diferencia radical</span>
+            <h2 class="section-title">FlexGPT no responde. Repregunta.</h2>
+          </div>
+
+          <div class="cmp-grid" data-animate="fade-up">
+
+            <!-- Columna izquierda — convencional -->
+            <div class="cmp-col cmp-col--against cmp-col--has-img">
+              <div class="cmp-col__inner">
+                <div class="cmp-col__img-wrap cmp-col__img-wrap--left cmp-col__img-wrap--against">
+                  <p class="cmp-col__img-text" style="color:#ff4f4f">A FAVOR DE LA RESPUESTA<br />EN CONTRA DEL PENSAMIENTO.</p>
+                </div>
+                <div class="cmp-col__text">
+                  <div class="cmp-col__header">
+                    <span class="cmp-col__tag cmp-col__tag--against">Tutor convencional IA</span>
+                    <p class="cmp-col__claim">
+                      Optimiza para entregar la respuesta correcta lo más rápido posible.
+                    </p>
+                  </div>
+                  <ul class="cmp-list">
+                    <li class="cmp-item cmp-item--against">
+                      <img class="cmp-item__icon" src="assets/img/x.svg" alt="" aria-hidden="true" />
+                      Resuelve la pregunta del estudiante
+                    </li>
+                    <li class="cmp-item cmp-item--against">
+                      <img class="cmp-item__icon" src="assets/img/x.svg" alt="" aria-hidden="true" />
+                      Premia la velocidad
+                    </li>
+                    <li class="cmp-item cmp-item--against">
+                      <img class="cmp-item__icon" src="assets/img/x.svg" alt="" aria-hidden="true" />
+                      Reduce la fricción cognitiva
+                    </li>
+                    <li class="cmp-item cmp-item--against">
+                      <img class="cmp-item__icon" src="assets/img/x.svg" alt="" aria-hidden="true" />
+                      El estudiante recibe en lugar de elaborar
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna derecha — FlexGPT (texto + imagen) -->
+            <div class="cmp-col cmp-col--for cmp-col--has-img">
+              <div class="cmp-col__inner">
+                <div class="cmp-col__img-wrap cmp-col__img-wrap--left">
+                  <p class="cmp-col__img-text">Contra la delegación.<br />A favor del criterio.</p>
+                </div>
+                <div class="cmp-col__text">
+                  <div class="cmp-col__header">
+                    <span class="cmp-col__tag cmp-col__tag--for">FlexGPT · Capa socrática</span>
+                    <p class="cmp-col__claim">
+                      Optimiza para que el estudiante elabore la respuesta — no para entregarla.
+                    </p>
+                  </div>
+                  <ul class="cmp-list">
+                    <li class="cmp-item cmp-item--for">
+                      <img class="cmp-item__icon cmp-item__icon--check" src="assets/img/check.svg" alt="" aria-hidden="true" />
+                      Le pide justificación a cada afirmación
+                    </li>
+                    <li class="cmp-item cmp-item--for">
+                      <img class="cmp-item__icon cmp-item__icon--check" src="assets/img/check.svg" alt="" aria-hidden="true" />
+                      Devuelve preguntas más profundas ante respuestas superficiales
+                    </li>
+                    <li class="cmp-item cmp-item--for">
+                      <img class="cmp-item__icon cmp-item__icon--check" src="assets/img/check.svg" alt="" aria-hidden="true" />
+                      Hace visibles las contradicciones
+                    </li>
+                    <li class="cmp-item cmp-item--for">
+                      <img class="cmp-item__icon cmp-item__icon--check" src="assets/img/check.svg" alt="" aria-hidden="true" />
+                      Sostiene la fricción cognitiva productiva
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== FLEXMIND · IDCA =================== -->
+      <section id="flexmind" class="section" aria-label="FlexMind IDCA">
+        <div class="container">
+
+          <div class="idca-layout" data-animate="fade-up">
+
+            <!-- Imagen izquierda -->
+            <div class="idca-img-wrap" role="img" aria-label="IDCA — Índice de Desarrollo Cognitivo Aumentado"></div>
+
+            <!-- Contenido derecha -->
+            <div class="idca-content">
+              <div class="section-header">
+                <span class="chapter-label chapter-label--cyan">Capa 05 · FlexMind</span>
+                <h2 class="section-title">IDCA — Índice de Desarrollo Cognitivo Aumentado</h2>
+                <p class="section-intro">
+                  La métrica que faltaba en la educación. No mide lo que el estudiante hace. Mide cómo piensa.
+                </p>
+              </div>
+
+              <div class="idca-cards">
+                <div class="idca-card">
+                  <span class="idca-card__label idca-card__label--against">
+                    <img class="idca-icon" src="assets/img/x.svg" alt="" aria-hidden="true" />
+                    Lo que no mide
+                  </span>
+                  <p>Actividad. Tiempo en plataforma. Respuestas cerradas. Rendimiento superficial.</p>
+                </div>
+                <div class="idca-card">
+                  <span class="idca-card__label idca-card__label--for">
+                    <img class="idca-icon idca-icon--check" src="assets/img/check.svg" alt="" aria-hidden="true" />
+                    Lo que mide
+                  </span>
+                  <p>Externalización del pensamiento. Cómo el estudiante elabora con sus propias palabras a lo largo del tiempo.</p>
+                </div>
+                <div class="idca-card">
+                  <span class="idca-card__label idca-card__label--how">
+                    <img class="idca-icon idca-icon--check" src="assets/img/check.svg" alt="" aria-hidden="true" />
+                    Cómo lo mide
+                  </span>
+                  <p>Evaluación pre/post intra-sujeto + análisis semántico conceptual del cuaderno personal del estudiante.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== III · LA METODOLOGÍA =================== -->
+      <section id="metodologia" class="section" aria-label="Metodología PACCC">
+        <div class="container">
+          <div class="section-header" data-animate="fade-up">
+            <span class="chapter-label">Metodología FlexPACCC</span>
+            <h2 class="section-title">
+              PACCC: El motor operativo que <br />
+              <em>organiza la experiencia cognitiva</em>
+            </h2>
+          </div>
+
+          <!-- Panel de detalle expandible -->
+          <div class="paccc-detail-wrap">
+
+            <div class="paccc-detail is-active" data-detail="1">
+              <div class="paccc-detail__inner">
+                <img class="paccc-detail__img" src="assets/img/paccc-personaliza.png" alt="Personaliza" loading="lazy" />
+                <div class="paccc-detail__content">
+                  <span class="paccc-detail__step">PASO 01</span>
+                  <div class="paccc-detail__title-row">
+                    <div class="paccc-detail__heading">
+                      <div class="paccc-detail__icon-sm"><img src="assets/img/icon-01.png" alt="" /></div>
+                      <h3 class="paccc-detail__title">Personaliza</h3>
+                    </div>
+                    <p class="paccc-detail__subtitle">El docente ajusta contenido y secuencia al perfil cognitivo real del estudiante.</p>
+                  </div>
+                  <p class="paccc-detail__text">El docente personaliza la conversación de la clase para su grupo: elige las preguntas del reservorio curricular, suma las suyas, decide con qué herramienta de IA van a trabajar sus estudiantes, ajusta los tiempos. Acá se orquesta la experiencia cognitiva para este grupo, en este contexto, en este momento.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paccc-detail" data-detail="2">
+              <div class="paccc-detail__inner">
+                <img class="paccc-detail__img" src="assets/img/paccc-aprende.png" alt="Aprende" loading="lazy" />
+                <div class="paccc-detail__content">
+                  <span class="paccc-detail__step">PASO 02</span>
+                  <div class="paccc-detail__title-row">
+                    <div class="paccc-detail__heading">
+                      <div class="paccc-detail__icon-sm"><img src="assets/img/icon-02.png" alt="" /></div>
+                      <h3 class="paccc-detail__title">Aprende</h3>
+                    </div>
+                    <p class="paccc-detail__subtitle">El estudiante NO empieza con IA. Construye presaber: videos, lecturas, simulaciones, base cognitiva.</p>
+                  </div>
+                  <p class="paccc-detail__text">El alumno entra en contacto con el contenido curricular curado audiovisualmente. Se homogeniza el punto de partida del grupo, se instala el tema en el cuerpo cognitivo, se construye la base común desde la cual todos van a pensar, conversar y crear. El contenido de calidad como punto de partida es la condición de la fricción posterior.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paccc-detail" data-detail="3">
+              <div class="paccc-detail__inner">
+                <img class="paccc-detail__img" src="assets/img/paccc-conversa.png" alt="Conversa" loading="lazy" />
+                <div class="paccc-detail__content">
+                  <span class="paccc-detail__step">PASO 03</span>
+                  <div class="paccc-detail__title-row">
+                    <div class="paccc-detail__heading">
+                      <div class="paccc-detail__icon-sm"><img src="assets/img/icon-03.png" alt="" /></div>
+                      <h3 class="paccc-detail__title">Conversa</h3>
+                    </div>
+                    <p class="paccc-detail__subtitle">Argumenta, justifica, explica con FlexGPT — que repregunta en lugar de responder.</p>
+                  </div>
+                  <p class="paccc-detail__text">FlexFlixGPT es socrática por diseño: re-pregunta, devuelve contraejemplos, exige justificar. En su cuaderno personalizado, el alumno responde las preguntas asignadas por el docente y suma las que él mismo necesita para comprender. Cuestiona, significa, transfiere, mapea, se pregunta para qué está aprendiendo lo que está aprendiendo. Deja de describir para comprender.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paccc-detail" data-detail="4">
+              <div class="paccc-detail__inner">
+                <img class="paccc-detail__img" src="assets/img/paccc-crea.png" alt="Crea" loading="lazy" />
+                <div class="paccc-detail__content">
+                  <span class="paccc-detail__step">PASO 04</span>
+                  <div class="paccc-detail__title-row">
+                    <div class="paccc-detail__heading">
+                      <div class="paccc-detail__icon-sm"><img src="assets/img/icon-04.png" alt="" /></div>
+                      <h3 class="paccc-detail__title">Crea</h3>
+                    </div>
+                    <p class="paccc-detail__subtitle">Recién ahora con IA: produce desde elaboración previa, no desde el vacío.</p>
+                  </div>
+                  <p class="paccc-detail__text">Si el principio es "pensar primero, IA después", Crea es donde se <em>ve</em> ese pensar. El alumno usa herramientas de IA para externalizar lo que entendió. Produce algo propio a partir de su comprensión, y en esa producción forja identidad cognitiva: se reconoce como alguien capaz de pensar, no solo de consumir pensamiento.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paccc-detail" data-detail="5">
+              <div class="paccc-detail__inner">
+                <img class="paccc-detail__img" src="assets/img/paccc-comparte.png" alt="Comparte" loading="lazy" />
+                <div class="paccc-detail__content">
+                  <span class="paccc-detail__step">PASO 05</span>
+                  <div class="paccc-detail__title-row">
+                    <div class="paccc-detail__heading">
+                      <div class="paccc-detail__icon-sm"><img src="assets/img/icon-05.png" alt="" /></div>
+                      <h3 class="paccc-detail__title">Comparte</h3>
+                    </div>
+                    <p class="paccc-detail__subtitle">Presenta, recibe feedback, consolida. La comprensión se vuelve visible y medible.</p>
+                  </div>
+                  <p class="paccc-detail__text">El alumno entrega su conversación con FlexFlixGPT y sus producciones con IA. El docente devuelve feedback personalizado a cada estudiante. Y junto con la Prueba previa y la Prueba posterior que enmarcan la experiencia, el sistema calcula el <em>IDCA (Índice de Desarrollo Cognitivo Aumentado)</em>: cuánto avanzó cada alumno, cuánto se logró formar.</p>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /paccc-detail-wrap -->
+
+          <div class="paccc-cards" data-animate="paccc-cards">
+            <div class="paccc-card is-active" data-paccc="1" role="button" tabindex="0">
+              <span class="pc-letter" aria-hidden="true">P</span>
+              <div class="pc-icon-wrap" aria-hidden="true"><img src="assets/img/icon-01.png" alt="" /></div>
+              <span class="pc-paso">PASO 01</span>
+              <h3 class="pc-title">Personaliza</h3>
+            </div>
+            <div class="paccc-card" data-paccc="2" role="button" tabindex="0">
+              <span class="pc-letter" aria-hidden="true">A</span>
+              <div class="pc-icon-wrap" aria-hidden="true"><img src="assets/img/icon-02.png" alt="" /></div>
+              <span class="pc-paso">PASO 02</span>
+              <h3 class="pc-title">Aprende</h3>
+            </div>
+            <div class="paccc-card" data-paccc="3" role="button" tabindex="0">
+              <span class="pc-letter" aria-hidden="true">C</span>
+              <div class="pc-icon-wrap" aria-hidden="true"><img src="assets/img/icon-03.png" alt="" /></div>
+              <span class="pc-paso">PASO 03</span>
+              <h3 class="pc-title">Conversa</h3>
+            </div>
+            <div class="paccc-card" data-paccc="4" role="button" tabindex="0">
+              <span class="pc-letter" aria-hidden="true">C</span>
+              <div class="pc-icon-wrap" aria-hidden="true"><img src="assets/img/icon-04.png" alt="" /></div>
+              <span class="pc-paso">PASO 04</span>
+              <h3 class="pc-title">Crea</h3>
+            </div>
+            <div class="paccc-card" data-paccc="5" role="button" tabindex="0">
+              <span class="pc-letter" aria-hidden="true">C</span>
+              <div class="pc-icon-wrap" aria-hidden="true"><img src="assets/img/icon-05.png" alt="" /></div>
+              <span class="pc-paso">PASO 05</span>
+              <h3 class="pc-title">Comparte</h3>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- =================== VI · CASOS DE ÉXITO =================== -->
+      <section id="casos" class="section" aria-label="Casos de éxito">
+        <div class="container">
+
+          <div class="section-header" data-animate="fade-up">
+            <span class="chapter-label chapter-label--cyan">VI · Casos de éxito</span>
+            <h2 class="section-title">Despliegues activos en 6 jurisdicciones.</h2>
+            <p class="section-intro">No es un prototipo. Son cohortes reales con datos longitudinales en producción.</p>
+          </div>
+
+          <!-- Fan 3D — Mendoza siempre en el centro (posición 4 de 7) -->
+          <div class="casos-fan-wrap">
+            <button class="casos-arrow casos-arrow--prev" aria-label="Anterior" id="casosPrev">&#8592;</button>
+            <button class="casos-arrow casos-arrow--next" aria-label="Siguiente" id="casosNext">&#8594;</button>
+          <div class="casos-fan" id="casosFan">
+
+            <!-- 1: Uruguay -->
+            <div class="caso-card">
+              <div class="caso-img-wrap"><img src="assets/img/slider-casosexito-tintafresca.webp" alt="Plan Ceibal Uruguay" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇺🇾</span><span class="caso-region">Uruguay</span><span class="caso-nivel">Multi-nivel</span></div>
+                <h3 class="caso-title">Plan Ceibal</h3>
+                <p class="caso-desc">Integración con la infraestructura digital nacional más consolidada de América Latina.</p>
+              </div>
+            </div>
+
+            <!-- 2: Perú -->
+            <div class="caso-card">
+              <div class="caso-img-wrap"><img src="assets/img/slider-casosexito-lima.webp" alt="Perú Potencia" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇵🇪</span><span class="caso-region">Perú</span><span class="caso-nivel">Primaria</span></div>
+                <h3 class="caso-title">Perú Potencia</h3>
+                <p class="caso-desc">Iniciativa nacional de educación digital con despliegue a escala.</p>
+              </div>
+            </div>
+
+            <!-- 3: Entre Ríos -->
+            <div class="caso-card">
+              <div class="caso-img-wrap"><img src="assets/img/slider-casosexito-entrerios.webp" alt="ER Aprende+" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇦🇷</span><span class="caso-region">Entre Ríos</span><span class="caso-nivel">Primaria</span></div>
+                <h3 class="caso-title">ER Aprende+</h3>
+                <p class="caso-desc">Programa provincial de transformación educativa con IA estructurada.</p>
+              </div>
+            </div>
+
+            <!-- 4: MENDOZA — CENTRO -->
+            <div class="caso-card caso-fan-center">
+              <div class="caso-img-wrap"><img src="assets/img/slide-casosexito-mendoza.webp" alt="Mendoza Aumentada" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇦🇷</span><span class="caso-region">Mendoza</span><span class="caso-nivel">Secundaria</span></div>
+                <h3 class="caso-title">Mendoza Aumentada</h3>
+                <p class="caso-desc">100 escuelas secundarias públicas. Etapa I + Etapa II operando con el programa Operadores en IA.</p>
+              </div>
+            </div>
+
+            <!-- 5: CABA -->
+            <div class="caso-card">
+              <div class="caso-img-wrap"><img src="assets/img/slide-casosexito-baaprende.webp" alt="Ciudad de Buenos Aires" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇦🇷</span><span class="caso-region">CABA</span><span class="caso-nivel">Primaria</span></div>
+                <h3 class="caso-title">Ciudad de Buenos Aires</h3>
+                <p class="caso-desc">Despliegue activo en escuelas primarias de la Ciudad Autónoma de Buenos Aires.</p>
+              </div>
+            </div>
+
+            <!-- 6: Chile -->
+            <div class="caso-card">
+              <div class="caso-img-wrap"><img src="assets/img/slide-casosexito-chile.webp" alt="Chile" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇨🇱</span><span class="caso-region">Chile</span><span class="caso-nivel">Primaria</span></div>
+                <h3 class="caso-title">Chile</h3>
+                <p class="caso-desc">Implementación con metodología PACCC en establecimientos educativos.</p>
+              </div>
+            </div>
+
+            <!-- 7: Catamarca -->
+            <div class="caso-card">
+              <div class="caso-img-wrap"><img src="assets/img/slider-casosexito-tintafresca.webp" alt="Catamarca" loading="lazy" /></div>
+              <div class="caso-body">
+                <div class="caso-meta"><span class="caso-flag">🇦🇷</span><span class="caso-region">Catamarca</span><span class="caso-nivel">Primaria</span></div>
+                <h3 class="caso-title">Catamarca</h3>
+                <p class="caso-desc">Implementación provincial en nivel primario con metodología PACCC.</p>
+              </div>
+            </div>
+
+          </div><!-- /casos-fan -->
+
+          <!-- Dots mobile -->
+          <div class="casos-dots" id="casosDots" aria-hidden="true"></div>
+
+          </div><!-- /casos-fan-wrap -->
+
+        </div>
+      </section>
+
+      <!-- =================== VII · PARA QUIÉN =================== -->
+      <section id="para-quien" class="section" aria-label="Para quién">
+        <div class="container">
+
+          <div class="section-header">
+            <span class="chapter-label chapter-label--cyan">VII · Para quién</span>
+            <h2 class="section-title">Tres audiencias. Tres compromisos.</h2>
+            <p class="section-intro">FlexFlix.ai opera en todos los niveles del sistema educativo — desde la decisión política hasta el aula.</p>
+          </div>
+
+          <div class="pq-grid">
+
+            <!-- Card 1 — Ministerio -->
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-ministerio.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18v-7" /><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" /><path d="M14 18v-7" /><path d="M18 18v-7" /><path d="M3 22h18" /><path d="M6 18v-7" /></svg>
+                  <span class="fx-card__tag">Ministerio</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">01</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Para quien decide políticas</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />Soberanía cognitiva auditable</li>
+                  <li><img src="assets/img/check.svg" alt="" />Evidencia longitudinal IDCA</li>
+                  <li><img src="assets/img/check.svg" alt="" />Invariantes pedagógicos protegidos contractualmente</li>
+                  <li><img src="assets/img/check.svg" alt="" />Caso operativo replicable en múltiples jurisdicciones</li>
+                  <li><img src="assets/img/check.svg" alt="" />Arquitectura auditable en lugar de servicio extranjero opaco</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Card 2 — Dirección -->
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-direccion.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M18 4.933V21" /><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" /><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" /><path d="M6 4.933V21" /><circle cx="12" cy="9" r="2" /></svg>
+                  <span class="fx-card__tag">Dirección</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">02</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Para quien gestiona la escuela</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />Dashboards estratégicos por escuela y aula</li>
+                  <li><img src="assets/img/check.svg" alt="" />Trazabilidad compartida con familias</li>
+                  <li><img src="assets/img/check.svg" alt="" />Formación docente integrada en el contrato</li>
+                  <li><img src="assets/img/check.svg" alt="" />Integración con SIS y LMS existentes</li>
+                  <li><img src="assets/img/check.svg" alt="" />Menos administración operativa, más conducción pedagógica</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Card 3 — Aula -->
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-aula.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20" /><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3" /><path d="m7 21 5-5 5 5" /></svg>
+                  <span class="fx-card__tag">Aula</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">03</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Para quien enseña</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />El docente como transpositor amplificado, no sustituido</li>
+                  <li><img src="assets/img/check.svg" alt="" />FlexGPT que repregunta, no resuelve</li>
+                  <li><img src="assets/img/check.svg" alt="" />Menos planificación operativa, más conducción cognitiva</li>
+                  <li><img src="assets/img/check.svg" alt="" />Productos diversos para evaluar comprensión real</li>
+                  <li><img src="assets/img/check.svg" alt="" />La IA al servicio del juicio docente</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== VIII · CONVERSEMOS =================== -->
+      <section id="contacto" class="section section--contacto" aria-label="Conversemos">
+        <div class="container">
+
+          <div class="section-header">
+            <span class="chapter-label chapter-label--cyan">Proceso · 3 reuniones</span>
+            <h2 class="section-title">El próximo paso.</h2>
+            <p class="section-intro">Lo que podemos hacer juntos en tres reuniones:</p>
+          </div>
+
+          <div class="conv-cards">
+
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-proc-diag.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
+                  <span class="fx-card__tag">Proceso · 01</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">01</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Sesión de diagnóstico</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />Mapeamos tu contexto, desafíos y objetivos</li>
+                  <li><img src="assets/img/check.svg" alt="" />Identificamos oportunidades de impacto real</li>
+                  <li><img src="assets/img/check.svg" alt="" />Entendemos a fondo tu realidad institucional</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-proc-demo.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15.033 9.44a.647.647 0 0 1 0 1.12l-4.065 2.352a.645.645 0 0 1-.968-.56V7.648a.645.645 0 0 1 .967-.56z" /><path d="M12 17v4" /><path d="M8 21h8" /><rect x="2" y="3" width="20" height="14" rx="2" /></svg>
+                  <span class="fx-card__tag">Proceso · 02</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">02</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Demo con cohorte real</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />FlexGPT en acción con estudiantes reales</li>
+                  <li><img src="assets/img/check.svg" alt="" />Caso de uso alineado a tu contexto</li>
+                  <li><img src="assets/img/check.svg" alt="" />Métricas IDCA en tiempo real visibles</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="fx-card">
+              <div class="fx-card__media">
+                <img class="fx-card__img" src="assets/img/card-proc-piloto.png" alt="" loading="lazy" />
+              </div>
+              <div class="fx-card__body">
+                <div class="fx-card__icon-row">
+                  <svg class="fx-card__icon-img" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
+                  <span class="fx-card__tag">Proceso · 03</span>
+                </div>
+                <div class="fx-card__heading">
+                  <span class="fx-card__num">03</span>
+                  <span class="fx-card__divider"></span>
+                  <h3 class="fx-card__title">Diseño de piloto</h3>
+                </div>
+                <ul class="fx-card__list">
+                  <li><img src="assets/img/check.svg" alt="" />Definimos alcance, métricas e integración</li>
+                  <li><img src="assets/img/check.svg" alt="" />Cronograma y roadmap de ejecución</li>
+                  <li><img src="assets/img/check.svg" alt="" />IDCA esperado y criterios de éxito claros</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="conv-cta">
+            <a href="mailto:pablo@flexflix.ai" class="conv-btn">Iniciá la conversación →</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a
+            href="#hero"
+            class="footer__logo-link"
+            aria-label="FlexFlix.ai inicio"
+          >
+            <img
+              src="assets/img/flexflix_logo2.png"
+              alt="FlexFlix"
+              class="nav__logo-img2"
+              height="32"
+              loading="lazy"
+            />
+          </a>
+          <span class="footer__tagline"
+            >Cognitive Governance Infrastructure</span
+          >
+          <a href="https://www.flexflix.ai/" class="footer__platform-link" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
+            flexflix.ai
+          </a>
+        </div>
+        <div class="footer__social" aria-label="Redes sociales">
+          <a href="https://www.instagram.com/flexflixteens/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.youtube.com/@FlexFlixKids" class="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/YouTuBe.svg" alt="YouTube" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://twitter.com/FlexFlixTeens" class="social-link" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/X.svg" alt="X" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.facebook.com/FlexFlixKids/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Facebook.svg" alt="Facebook" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.tiktok.com/@flexflix.ai" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/TikTok.svg" alt="TikTok" width="20" height="20" loading="lazy" />
+          </a>
+          <a href="https://www.twitch.tv/flexflixtv" class="social-link" aria-label="Twitch" target="_blank" rel="noopener noreferrer">
+            <img src="assets/LogosRRSS/Twitch.svg" alt="Twitch" width="20" height="20" loading="lazy" />
+          </a>
+        </div>
+        <p class="footer__copy">
+          © 2026 FlexFlix. Todos los derechos reservados.
+        </p>
+        <div class="footer__links">
+          <a href="terminos.html">Términos</a>
+          <a href="privacidad.html">Privacidad</a>
+        </div>
+      </div>
+    </footer>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="main.js"></script>
+    <script src="neural-cinematic.js"></script>
+  </body>
+</html>
