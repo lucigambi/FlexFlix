@@ -13,7 +13,12 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     const t = document.querySelector(a.getAttribute("href"));
     if (!t) return;
     e.preventDefault();
-    gsap.to(window, { scrollTo: { y: t, offsetY: 72 }, duration: 1.2, ease: "power4.inOut" });
+    const fromMobileMenu = !!a.closest(".mobile-menu");
+    const offset = (document.getElementById("nav") || {}).offsetHeight + 8 || 80;
+    // Si viene del menú mobile, espera a que cierre (animación 350ms) antes de scrollear
+    setTimeout(() => {
+      gsap.to(window, { scrollTo: { y: t, offsetY: offset }, duration: 1.0, ease: "power4.inOut" });
+    }, fromMobileMenu ? 380 : 0);
   });
 });
 

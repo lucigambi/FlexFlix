@@ -413,6 +413,12 @@
   }
 
   .insight-card__img {
-    height: 200px;
+    aspect-ratio: auto;
+    height: clamp(200px, 52vw, 260px);
+    align-self: auto;
+  }
+
+  .insight-card__img img {
+    object-position: center center;
   }
 }

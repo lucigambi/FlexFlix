@@ -421,8 +421,9 @@ button {
 }
 
 /* ---- SECTIONS ---- */
-.section { padding-block: var(--sp-section); position: relative; }
+.section { padding-block: var(--sp-section); position: relative; scroll-margin-top: calc(var(--nav-h) + 8px); }
 .section > .container { position: relative; z-index: 1; }
+#fx-depth { scroll-margin-top: 0; }
 
 .section-header { margin-bottom: clamp(12px, 2vw, 24px); }
 
@@ -3260,5 +3261,31 @@ body {
   .pq-card__sub           { font-size: 18px; }
   .caso-desc              { font-size: 16px; }
   .caso-title             { font-size: 16px; }
+}
+
+/* =================================================================
+   MOBILE — Reducción de contenido ≤768px
+   Solo oculta contenido redundante/largo. Desktop intacto.
+================================================================= */
+@media (max-width: 768px) {
+
+  /* Secciones completas duplicadas — ya están dentro del acordeón de Arquitectura */
+  #flexgpt,
+  #flexmind { display: none; }
+
+  /* El Problema y Solución — ocultar párrafos largos, mantener statements cortos */
+  .sol-hero__col .sol-body { display: none; }
+
+  /* Solución — ocultar el intro de dos columnas, dejar solo las 3 cards */
+  #solucion .sol-hero { display: none; }
+
+  /* PACCC — ocultar párrafo descriptivo largo, mantener título + subtítulo */
+  .paccc-detail__text { display: none; }
+
+  /* Arquitectura — ocultar lista de features al expandir, mantener descripción y chips */
+  .arq-panel-features { display: none; }
+
+  /* Casos — mostrar flechas de navegación en mobile */
+  .casos-arrow { display: flex; }
 }
 
