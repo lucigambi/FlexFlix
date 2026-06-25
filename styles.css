@@ -801,6 +801,8 @@ button {
   margin-top: var(--sp-section-sm);
   padding: 20px 0 80px;
   overflow: visible;
+  perspective: 1200px;
+  perspective-origin: 50% 40%;
 }
 
 .caso-card {
@@ -819,28 +821,28 @@ button {
               box-shadow 0.5s ease, z-index 0s;
 }
 
-/* Progresión uniforme — perspective() individual para distorsión simétrica */
-.casos-fan .caso-card:nth-child(1) { transform: perspective(1000px) rotateY(26deg)  translateX(60px)  translateY(18px) scale(0.80); z-index: 1; }
-.casos-fan .caso-card:nth-child(2) { transform: perspective(1000px) rotateY(15deg)  translateY(10px) scale(0.87); z-index: 2; }
-.casos-fan .caso-card:nth-child(3) { transform: perspective(1000px) rotateY(6deg)   translateY(4px)  scale(0.94); z-index: 3; }
-.casos-fan .caso-card:nth-child(4) { transform: perspective(1000px) rotateY(0deg)   translateY(0)    scale(1.06); z-index: 10;
+/* Progresión uniforme — perspectiva en el padre, punto de fuga compartido */
+.casos-fan .caso-card:nth-child(1) { transform: rotateY(28deg)  translateX(50px)  translateY(20px) scale(0.76); z-index: 1; }
+.casos-fan .caso-card:nth-child(2) { transform: rotateY(16deg)  translateX(10px)  translateY(12px) scale(0.83); z-index: 2; }
+.casos-fan .caso-card:nth-child(3) { transform: rotateY(6deg)                     translateY(4px)  scale(0.91); z-index: 3; }
+.casos-fan .caso-card:nth-child(4) { transform: rotateY(0deg)                     translateY(0)    scale(1.06); z-index: 10;
   box-shadow: 0 30px 80px rgba(0,0,0,0.65), 0 0 50px rgba(151,115,212,0.35);
   border-color: rgba(151,115,212,0.55);
 }
-.casos-fan .caso-card:nth-child(5) { transform: perspective(1000px) rotateY(-6deg)  translateY(4px)  scale(0.94); z-index: 3; }
-.casos-fan .caso-card:nth-child(6) { transform: perspective(1000px) rotateY(-15deg) translateY(10px) scale(0.87); z-index: 2; }
-.casos-fan .caso-card:nth-child(7) { transform: perspective(1000px) rotateY(-26deg) translateX(-60px) translateY(18px) scale(0.80); z-index: 1; }
+.casos-fan .caso-card:nth-child(5) { transform: rotateY(-6deg)                    translateY(4px)  scale(0.91); z-index: 3; }
+.casos-fan .caso-card:nth-child(6) { transform: rotateY(-16deg) translateX(-10px) translateY(12px) scale(0.83); z-index: 2; }
+.casos-fan .caso-card:nth-child(7) { transform: rotateY(-28deg) translateX(-50px) translateY(20px) scale(0.76); z-index: 1; }
 
 /* Hover — carta viene al frente */
 .casos-fan .caso-card:hover {
-  transform: perspective(1000px) rotateY(0deg) translateY(-12px) scale(1.06) !important;
+  transform: rotateY(0deg) translateY(-12px) scale(1.06) !important;
   z-index: 20 !important;
   box-shadow: 0 40px 80px rgba(0,0,0,0.7), 0 0 60px rgba(151,115,212,0.4);
 }
 
 /* Mendoza en hover — escala extra */
 .casos-fan .caso-card:nth-child(4):hover {
-  transform: perspective(1000px) rotateY(0deg) translateY(-16px) scale(1.18) !important;
+  transform: rotateY(0deg) translateY(-16px) scale(1.18) !important;
   box-shadow: 0 50px 100px rgba(0,0,0,0.75), 0 0 80px rgba(151,115,212,0.55) !important;
 }
 
@@ -874,35 +876,42 @@ button {
 .caso-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 .caso-flag {
-  font-size: 18px;
-  line-height: 1;
+  display: none;
 }
 
 .caso-region {
   font-family: var(--font-title);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #9773D4;
+  letter-spacing: 0.10em;
+  color: var(--violet);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .caso-nivel {
-  margin-left: auto;
-  padding: 2px 9px;
-  border-radius: 100px;
-  border: 1px solid rgba(151,115,212,0.35);
   font-family: var(--font-title);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(151,115,212,0.85);
-  background: rgba(151,115,212,0.08);
+  letter-spacing: 0.08em;
+  color: rgba(185,196,239,0.45);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.caso-nivel::before {
+  content: '·';
+  margin-right: 5px;
+  opacity: 0.5;
 }
 
 .caso-title {
@@ -3150,25 +3159,25 @@ body {
     height: 320px;
   }
 
-  .casos-fan .caso-card:nth-child(1) { transform: perspective(1000px) rotateY(26deg)  translateX(40px)  translateY(18px) scale(0.80) !important; }
-  .casos-fan .caso-card:nth-child(2) { transform: perspective(1000px) rotateY(16deg)  translateY(10px) scale(0.86) !important; }
-  .casos-fan .caso-card:nth-child(3) { transform: perspective(1000px) rotateY(8deg)   translateY(4px)  scale(0.93) !important; }
-  .casos-fan .caso-card:nth-child(5) { transform: perspective(1000px) rotateY(-8deg)  translateY(4px)  scale(0.93) !important; }
-  .casos-fan .caso-card:nth-child(6) { transform: perspective(1000px) rotateY(-16deg) translateY(10px) scale(0.86) !important; }
-  .casos-fan .caso-card:nth-child(7) { transform: perspective(1000px) rotateY(-26deg) translateX(-40px) translateY(18px) scale(0.80) !important; }
+  .casos-fan .caso-card:nth-child(1) { transform: rotateY(28deg)  translateX(40px)  translateY(20px) scale(0.76) !important; }
+  .casos-fan .caso-card:nth-child(2) { transform: rotateY(16deg)  translateX(10px)  translateY(12px) scale(0.83) !important; }
+  .casos-fan .caso-card:nth-child(3) { transform: rotateY(6deg)                     translateY(4px)  scale(0.91) !important; }
+  .casos-fan .caso-card:nth-child(5) { transform: rotateY(-6deg)                    translateY(4px)  scale(0.91) !important; }
+  .casos-fan .caso-card:nth-child(6) { transform: rotateY(-16deg) translateX(-10px) translateY(12px) scale(0.83) !important; }
+  .casos-fan .caso-card:nth-child(7) { transform: rotateY(-28deg) translateX(-40px) translateY(20px) scale(0.76) !important; }
 
   .casos-fan .caso-card:hover {
-    transform: perspective(1000px) rotateY(0deg) translateY(-12px) scale(1.06) !important;
+    transform: rotateY(0deg) translateY(-12px) scale(1.06) !important;
     z-index: 20 !important;
     box-shadow: 0 40px 80px rgba(0,0,0,0.7), 0 0 60px rgba(151,115,212,0.4) !important;
   }
 
   .casos-fan .caso-card:nth-child(1):hover {
-    transform: perspective(1000px) rotateY(0deg) translateX(220px) translateY(-12px) scale(1.06) !important;
+    transform: rotateY(0deg) translateX(220px) translateY(-12px) scale(1.06) !important;
   }
 
   .casos-fan .caso-card:nth-child(7):hover {
-    transform: perspective(1000px) rotateY(0deg) translateX(-220px) translateY(-12px) scale(1.06) !important;
+    transform: rotateY(0deg) translateX(-220px) translateY(-12px) scale(1.06) !important;
   }
 }
 
