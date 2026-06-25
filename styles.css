@@ -1426,7 +1426,7 @@ button {
   gap: 12px;
   padding: 20px 22px;
   background: rgba(23,28,84,0.55);
-  border-left: 3px solid var(--green);
+  border-left: 3px solid #00CFFF;
   border-radius: 12px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1447,9 +1447,9 @@ button {
   display: block;
 }
 
-/* Check en verde */
+/* Check en cyan (default) */
 .sol-hero__col:not(.sol-hero__col--against) .sol-col-icon {
-  filter: invert(65%) sepia(60%) saturate(500%) hue-rotate(110deg) brightness(1.1);
+  filter: hue-rotate(30deg) saturate(1.2);
 }
 
 .sol-subtitle__bar {
@@ -1457,7 +1457,7 @@ button {
   width: 2px;
   height: 1.1em;
   border-radius: 2px;
-  background: var(--green);
+  background: #00CFFF;
   flex-shrink: 0;
 }
 
@@ -1465,11 +1465,7 @@ button {
   background: #ff4f4f;
 }
 
-/* Variante negativa — borde, subtitle y accent en rojo */
-.sol-hero__col:not(.sol-hero__col--against) .sol-subtitle {
-  color: var(--green);
-}
-
+/* Variante negativa */
 .sol-hero__col--against {
   border-left-color: #ff4f4f;
 }
@@ -1478,6 +1474,20 @@ button {
 }
 .sol-hero__col--against .sol-statement__line--accent {
   color: #ff7070;
+}
+
+/* Good Friction — verde solo en comparaciones neg/pos */
+.sol-hero--plain .sol-hero__col:not(.sol-hero__col--against) {
+  border-left-color: var(--green);
+}
+.sol-hero--plain .sol-hero__col:not(.sol-hero__col--against) .sol-subtitle {
+  color: var(--green);
+}
+.sol-hero--plain .sol-hero__col:not(.sol-hero__col--against) .sol-subtitle__bar {
+  background: var(--green);
+}
+.sol-hero--plain .sol-hero__col:not(.sol-hero__col--against) .sol-col-icon {
+  filter: invert(65%) sepia(60%) saturate(500%) hue-rotate(110deg) brightness(1.1);
 }
 
 .sol-hero__img img {
