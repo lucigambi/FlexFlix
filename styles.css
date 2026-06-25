@@ -428,11 +428,24 @@ button {
 .section-header { margin-bottom: clamp(12px, 2vw, 24px); }
 
 .chapter-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
   font-family: var(--font-title);
   font-size: 16px; font-weight: 600;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--accent-1); margin-bottom: 10px;
+}
+
+.chapter-label::before,
+.chapter-label::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: currentColor;
+  opacity: 0.55;
+  flex-shrink: 0;
 }
 
 .section-title {

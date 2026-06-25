@@ -11,7 +11,9 @@
 }
 
 .insights-hero__label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
   font-family: var(--font-title);
   font-size: 16px;
   font-weight: 600;
@@ -19,6 +21,17 @@
   text-transform: uppercase;
   color: #00eaff;
   margin-bottom: 12px;
+}
+
+.insights-hero__label::before,
+.insights-hero__label::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: currentColor;
+  opacity: 0.55;
+  flex-shrink: 0;
 }
 
 .insights-hero__title {
@@ -42,34 +55,39 @@
 /* ── Filter tabs ── */
 .insights-filters {
   display: flex;
-  gap: 10px;
+  gap: 28px;
   flex-wrap: wrap;
   margin-bottom: clamp(28px, 3vw, 44px);
   position: relative;
   z-index: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 14px;
 }
 
 .insights-filter {
-  padding: 6px 18px;
-  border-radius: 100px;
-  border: 1px solid rgba(255,255,255,0.10);
+  padding: 0 0 10px;
+  border: none;
+  border-bottom: 2px solid transparent;
   background: transparent;
   font-family: var(--font-title);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(185,196,239,0.55);
+  color: rgba(185,196,239,0.40);
   cursor: pointer;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition: color 0.2s, border-color 0.2s;
+  margin-bottom: -15px;
 }
 
-.insights-filter:hover,
+.insights-filter:hover {
+  color: rgba(185,196,239,0.80);
+}
+
 .insights-filter.is-active {
-  border-color: #00eaff;
   color: #00eaff;
-  background: rgba(0,234,255,0.07);
+  border-bottom-color: #00eaff;
 }
 
 /* ── Article list ── */
