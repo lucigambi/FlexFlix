@@ -19,7 +19,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #00eaff;
+  color: #00CFFF;
   margin-bottom: 12px;
 }
 
@@ -86,8 +86,8 @@
 }
 
 .insights-filter.is-active {
-  color: #00eaff;
-  border-bottom-color: #00eaff;
+  color: #00CFFF;
+  border-bottom-color: #00CFFF;
 }
 
 /* ── Article list ── */
@@ -154,7 +154,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #00eaff;
+  color: #00CFFF;
 }
 
 @keyframes pulse-dot {
@@ -396,7 +396,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #00eaff;
+  color: #00CFFF;
   margin: 36px 0 12px;
 }
 
@@ -414,14 +414,14 @@
 }
 
 .legal-wrap a {
-  color: #00eaff;
+  color: #00CFFF;
   text-decoration: none;
   border-bottom: 1px solid rgba(0,234,255,0.3);
   transition: border-color 0.2s;
 }
 
 .legal-wrap a:hover {
-  border-color: #00eaff;
+  border-color: #00CFFF;
 }
 
 /* ── Responsive ── */

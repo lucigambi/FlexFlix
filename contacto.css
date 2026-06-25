@@ -17,7 +17,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #00eaff;
+  color: #00CFFF;
   margin-bottom: 12px;
 }
 
@@ -191,7 +191,7 @@
   padding: 28px 26px;
   background: rgba(23,28,84,0.55);
   border: 1px solid rgba(255,255,255,0.07);
-  border-left: 3px solid #00eaff;
+  border-left: 3px solid #00CFFF;
   border-radius: 14px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -203,7 +203,7 @@
   font-weight: 600;
   letter-spacing: 0.20em;
   text-transform: uppercase;
-  color: #00eaff;
+  color: #00CFFF;
   margin-bottom: 4px;
   display: block;
 }
@@ -235,7 +235,7 @@
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: #00eaff;
+  color: #00CFFF;
   text-decoration: none;
   transition: opacity 0.2s;
 }
