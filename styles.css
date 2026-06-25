@@ -1305,7 +1305,7 @@ button {
    ============================================= */
 .section-title em {
   font-style: normal;
-  background: linear-gradient(90deg, var(--accent-1) 0%, var(--accent-2) 100%);
+  background: linear-gradient(90deg, #F1288D 0%, #F97316 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2961,11 +2961,11 @@ body {
 .nav__logo-ai,
 .text-accent,
 .section-title em {
-  background: linear-gradient(90deg, var(--neon-cyan), #fff, var(--neon-pink));
+  background: linear-gradient(90deg, #F1288D, #F97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 14px rgba(0,234,255,.22));
+  filter: drop-shadow(0 0 14px rgba(241,40,141,.22));
 }
 
 .btn--primary,

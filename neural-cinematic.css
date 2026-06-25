@@ -183,7 +183,7 @@
 
 .fx-depth__title-highlight {
   font-weight: 600;
-  background: linear-gradient(90deg, #fff 0%, #00eaff 100%);
+  background: linear-gradient(90deg, #F1288D 0%, #F97316 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
