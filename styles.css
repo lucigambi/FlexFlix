@@ -1426,7 +1426,7 @@ button {
   gap: 12px;
   padding: 20px 22px;
   background: rgba(23,28,84,0.55);
-  border-left: 3px solid #00CFFF;
+  border-left: 3px solid var(--green);
   border-radius: 12px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1447,9 +1447,9 @@ button {
   display: block;
 }
 
-/* Check en cyan del site */
+/* Check en verde */
 .sol-hero__col:not(.sol-hero__col--against) .sol-col-icon {
-  filter: hue-rotate(30deg) saturate(1.2);
+  filter: invert(65%) sepia(60%) saturate(500%) hue-rotate(110deg) brightness(1.1);
 }
 
 .sol-subtitle__bar {
@@ -1457,7 +1457,7 @@ button {
   width: 2px;
   height: 1.1em;
   border-radius: 2px;
-  background: #00CFFF;
+  background: var(--green);
   flex-shrink: 0;
 }
 
@@ -1466,6 +1466,10 @@ button {
 }
 
 /* Variante negativa — borde, subtitle y accent en rojo */
+.sol-hero__col:not(.sol-hero__col--against) .sol-subtitle {
+  color: var(--green);
+}
+
 .sol-hero__col--against {
   border-left-color: #ff4f4f;
 }
