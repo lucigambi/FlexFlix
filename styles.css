@@ -441,8 +441,8 @@ button {
 .chapter-label::after {
   content: '';
   display: block;
-  width: 28px;
-  height: 1.5px;
+  width: 1.5px;
+  height: 14px;
   background: currentColor;
   opacity: 0.55;
   flex-shrink: 0;
