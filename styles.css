@@ -2994,8 +2994,6 @@ body {
   text-shadow: 0 0 16px rgba(0,234,255,.35);
 }
 
-.chapter-label::before { content: none; }
-
 .section-title {
   text-shadow:
     0 0 22px rgba(151,115,212,.18),
