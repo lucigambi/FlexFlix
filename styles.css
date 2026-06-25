@@ -48,8 +48,8 @@
   --gap:           clamp(16px, 2.5vw,  32px);
 
   /* Canonical gradients (3 patterns only) */
-  --grad-primary:  linear-gradient(135deg, #9773D4, #00eaff);
-  --grad-accent:   linear-gradient(135deg, #9773D4, #F1288D);
+  --grad-primary:  linear-gradient(135deg, #F1288D, #F97316);
+  --grad-accent:   linear-gradient(135deg, #F1288D, #F97316);
   --grad-text:     linear-gradient(90deg, #fff, #00eaff);
 
   /* Motion */
@@ -218,25 +218,25 @@ button {
   white-space: nowrap;
 }
 .btn--primary {
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(135deg, #F1288D, #F97316);
   color: white;
-  box-shadow: 0 0 0 0 rgba(151, 115, 212, 0);
+  box-shadow: 0 0 0 0 rgba(241, 40, 141, 0);
 }
 .btn--primary:hover {
   box-shadow:
-    0 0 40px rgba(151, 115, 212, 0.45),
-    0 8px 24px rgba(241, 40, 141, 0.30);
+    0 0 40px rgba(241, 40, 141, 0.45),
+    0 8px 24px rgba(249, 115, 22, 0.35);
   transform: translateY(-2px);
 }
 .btn--nav {
-  background: var(--accent-1-soft); color: var(--accent-1);
-  border: 1px solid var(--accent-1-border);
+  background: rgba(241,40,141,0.08); color: #F1288D;
+  border: 1px solid rgba(241,40,141,0.28);
   padding: 12px 20px; min-height: 44px; font-size: 15px; font-weight: 600;
   border-radius: var(--r-sm); flex-shrink: 0;
   letter-spacing: 0.08em;
 }
 .btn--nav:hover {
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(135deg, #F1288D, #F97316);
   border-color: transparent; color: white; transform: translateY(-1px);
 }
 
@@ -389,15 +389,15 @@ button {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(105deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(135deg, #F1288D, #F97316);
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(151,115,212,0.35);
+  box-shadow: 0 8px 32px rgba(241,40,141,0.35);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .mobile-link--cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(151,115,212,0.5);
+  box-shadow: 0 12px 40px rgba(241,40,141,0.50);
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -520,7 +520,7 @@ button {
   gap: 8px;
   padding: 6px 18px;
   border-radius: 100px;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(135deg, #F1288D, #F97316);
   color: #fff;
   font-family: var(--font-title);
   font-size: 14px;
@@ -529,7 +529,7 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(151,115,212,0.4);
+  box-shadow: 0 4px 20px rgba(241,40,141,0.35);
   margin-top: 10px;
 }
 .footer__platform-link:hover {
@@ -1218,8 +1218,8 @@ button {
   letter-spacing: 0.08em;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(135deg, #9773D4, #00eaff);
-  box-shadow: 0 0 32px rgba(151,115,212,0.35), 0 0 48px rgba(0,234,255,0.15);
+  background: linear-gradient(135deg, #F1288D, #F97316);
+  box-shadow: 0 0 32px rgba(241,40,141,0.35), 0 0 48px rgba(249,115,22,0.15);
   transition: box-shadow var(--dur), transform var(--dur) var(--ease), filter var(--dur);
 }
 
@@ -2970,19 +2970,19 @@ body {
 
 .btn--primary,
 .btn--nav {
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  background: linear-gradient(135deg, #F1288D, #F97316);
   color: #fff;
   box-shadow:
-    0 0 22px rgba(0,234,255,.22),
-    0 0 42px rgba(241,40,141,.18);
+    0 0 22px rgba(241,40,141,.28),
+    0 0 42px rgba(249,115,22,.18);
 }
 
 .btn--primary:hover,
 .btn--nav:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow:
-    0 0 34px rgba(0,234,255,.42),
-    0 0 76px rgba(241,40,141,.32);
+    0 0 34px rgba(241,40,141,.50),
+    0 0 76px rgba(249,115,22,.32);
 }
 
 
@@ -3010,8 +3010,8 @@ body {
 
 .scroll-progress {
   height: 3px;
-  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
-  box-shadow: 0 0 18px rgba(0,234,255,.8);
+  background: linear-gradient(90deg, #F1288D, #F97316);
+  box-shadow: 0 0 18px rgba(241,40,141,.7);
 }
 
 /* ═══════════════════════════════════════════════════════════

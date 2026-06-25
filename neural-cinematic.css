@@ -227,10 +227,10 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  background: linear-gradient(135deg, #00eaff, #8b5cf6, #f1288d);
+  background: linear-gradient(135deg, #F1288D, #F97316);
   box-shadow:
-    0 0 28px rgba(0, 234, 255, 0.26),
-    0 0 60px rgba(241, 40, 141, 0.18);
+    0 0 28px rgba(241, 40, 141, 0.30),
+    0 0 60px rgba(249, 115, 22, 0.20);
 }
 
 /* ── Tablet 769px–1024px: video desktop con offset del nav ── */
